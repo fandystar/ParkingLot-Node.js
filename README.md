@@ -116,7 +116,7 @@ There are two classes defined:
 
 `ParkingLot()`: It is the main class which is used to initialize a parking lot. In each parking lot there is maximum number of slots and an array of slots that will be occupied by the car. It has following methods:
 
-- `createParkingLot(slotsCapacity)` : Creates a parking lot with given input. It throws an error `Minimum one slot is required to create parking slot` if zero or negative number (n <= 0) is provided as an input.
+- `createParkingLot(slotsCapacity)` : Creates a parking lot with given input. It throws an error `Minimum one slot is required to create parking slot` 
  
     - `Minimum one slot is required to create parking slot` : When parking lot is not initialized.
 
@@ -130,7 +130,7 @@ There are two classes defined:
     
     - `Please provide car number and parking hours` : When input contains either of two i.e. car number and parking hours
 
-    - `Slot number <CAR NUMBER> is not found` when slot number is absent.
+    - `Slot number <carNumber> is not found` when slot number is absent.
 
 
 - `getSlotsStatus()` : Returns an array containing slot number and car number. It throws an error `Sorry, parking lot is empty` if parking lot is empty.
@@ -202,7 +202,7 @@ Feel free to reach out to me via email. Shoot your doubts at [fandyarayalin@gmai
 
 ## Author
 
-[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot/images/0)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/0)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot/images/1)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/1)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/2)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/2)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/3)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/3)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/4)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/4)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/5)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/5)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/6)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/6)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/7)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/7)
+[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/0)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/0)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/1)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/1)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/2)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/2)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/3)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/3)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/4)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/4)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/5)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/5)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/6)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/6)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/7)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/7)
 
 #### [fandy araya lin](https://github.com/fandystar)
 
