@@ -149,7 +149,7 @@ Tests are written using [Jest](https://jestjs.io) and can be run using `npm test
 
 #### Test Screenshots
 
-Please go to `screenshots/` folder to find screenshots of testing **Parking Lot**  
+Please go to `test_screenshots/` folder to find screenshots of testing **Parking Lot**  
 
 #### Unit tests
 
