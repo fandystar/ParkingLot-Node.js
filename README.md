@@ -35,11 +35,11 @@ B. Components ( OOP approach )
 2.1. setSlotsCapacity : change slots capacity
 2.2. carPark : allocate the nearest slot to the incoming car
 2.3. carLeave : make slot the outcoming car to be 'free'
-2.4  getCarsStatus : display cars slot details (slot number and 
+2.4  getSlotssStatus : display slot details (slot number and 
 registration number )
 
 
 3. List of Utils ( helper function ) :
-3.1. parkingCharge : calculate parking charge ( car leave )
+3.1. parkingCharge : calculate parking charge based parking hours ( car leave )
 
 

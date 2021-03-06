@@ -24,7 +24,7 @@ function processUserCommands (input) {
     } else if (input.includes('leave')) {
         print(parking.carLeave(input.split(' ')[1],input.split(' ')[2]))
     } else if   (input.includes('status')) {
-        print(parking.getCarsStatus())
+        print(parking.getSlotsStatus().join('\n'))
     }    
     openInteractiveConsole();
 }

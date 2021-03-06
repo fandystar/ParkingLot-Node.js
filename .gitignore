@@ -1,6 +1,10 @@
-./node_modules/**/*
-node_modules
-package-lock.json
-dist
-.nyc_output
-coverage
+
+# Build files
+build/
+bin/
+node_modules/
+
+
+# Coverage
+.nyc_output/
+coverage/
