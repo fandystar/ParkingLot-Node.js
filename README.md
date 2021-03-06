@@ -145,7 +145,7 @@ There are two classes defined:
 
 Tests are written using [Jest](https://jestjs.io) and can be run using `npm test`
 
-- `npm test` : Run unit tests only (Tests for functions in Parking lot Class)
+- `npm test` : Run unit tests only (Tests for functions in Parking lot Class and parkingCharge function)
 
 #### Test Screenshots
 
