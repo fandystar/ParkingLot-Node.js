@@ -5,7 +5,7 @@ clear()
 const ParkingLot = require('../class/ParkingLot')
 let parking= new ParkingLot()
         
-describe('test set SlotsCapacity to be 6', function () {
+describe('set slots Capacity to be 6', function () {
     test('setSlotsCapacity', function (done) {
         expect(parking.setSlotsCapacity(6)
         ).toBe('Created parking lot with 6 slots')
@@ -13,7 +13,7 @@ describe('test set SlotsCapacity to be 6', function () {
     })
 })
 
-describe('test carPark slot 1', function () {
+describe('car park in slot 1', function () {
     test('carPark', function (done) {
         expect(parking.carPark('KA-01-HH-1234')
         ).toBe('Allocated slot number : 1')
@@ -21,7 +21,7 @@ describe('test carPark slot 1', function () {
     })
 })
 
-describe('test carPark slot 2', function () {
+describe('car park in slot 2', function () {
     test('carPark', function (done) {
         expect(parking.carPark('KA-01-HH-9999')
         ).toBe('Allocated slot number : 2')
@@ -29,7 +29,7 @@ describe('test carPark slot 2', function () {
     })
 })
 
-describe('test carPark slot 3', function () {
+describe('car park in slot 3', function () {
     test('carPark', function (done) {
         expect(parking.carPark('KA-01-BB-0001')
         ).toBe('Allocated slot number : 3')
@@ -37,7 +37,7 @@ describe('test carPark slot 3', function () {
     })
 })
 
-describe('test carPark slot 4', function () {
+describe('car park in slot 4', function () {
     test('carPark', function (done) {
         expect(parking.carPark('KA-01-HH-7777')
         ).toBe('Allocated slot number : 4')
@@ -45,7 +45,7 @@ describe('test carPark slot 4', function () {
     })
 })
 
-describe('test carPark slot 5', function () {
+describe('car park in slot 5', function () {
     test('carPark', function (done) {
         expect(parking.carPark('KA-01-HH-2701')
         ).toBe('Allocated slot number : 5')
@@ -53,7 +53,7 @@ describe('test carPark slot 5', function () {
     })
 })
 
-describe('test carPark slot 6', function () {
+describe('car park in slot 6', function () {
     test('carPark', function (done) {
         expect(parking.carPark('KA-01-HH-3141')
         ).toBe('Allocated slot number : 6')
@@ -61,7 +61,7 @@ describe('test carPark slot 6', function () {
     })
 })
 
-describe('test carLeave', function () {
+describe('car leave from slot 6', function () {
     test('carLeave', function (done) {
         expect(parking.carLeave('KA-01-HH-3141',4)
         ).toBe('Registration number KA-01-HH-3141 with Slot Number 6 is free with Charge 30')
@@ -69,10 +69,130 @@ describe('test carLeave', function () {
     })
 })
 
-describe('test getSlotsStatus 6 slots', function () {
+describe('get slots status length which are 5 slots + 1 header  = 6 ', function () {
     test('getSlotsStatus', function (done) {
         expect(parking.getSlotsStatus().length
         ).toBe(6)
         done() 
     })
 })
+
+describe('car park in slot 6', function () {
+    test('carPark', function (done) {
+        expect(parking.carPark('KA-01-P-333')
+        ).toBe('Allocated slot number : 6')
+        done() 
+    })
+})
+
+describe('car park if slot is full ', function () {
+    test('carPark', function (done) {
+        expect(parking.carPark('DL-12-AA-9999')
+        ).toBe('Sorry, parking lot is full')
+        done() 
+    })
+})
+
+describe('car leave from slot 1', function () {
+    test('carLeave', function (done) {
+        expect(parking.carLeave('KA-01-HH-1234',4)
+        ).toBe('Registration number KA-01-HH-1234 with Slot Number 1 is free with Charge 30')
+        done() 
+    })
+})
+
+describe('car leave from slot 3', function () {
+    test('carLeave', function (done) {
+        expect(parking.carLeave('KA-01-BB-0001',4)
+        ).toBe('Registration number KA-01-BB-0001 with Slot Number 3 is free with Charge 30')
+        done() 
+    })
+})
+
+describe('car leave if car number not registered', function () {
+    test('carLeave', function (done) {
+        expect(parking.carLeave('DL-12-AA-9999',4)
+        ).toBe('Registration number DL-12-AA-9999 not found')
+        done() 
+    })
+})
+
+describe('car park in slot 1', function () {
+    test('carPark', function (done) {
+        expect(parking.carPark('KA-09-HH-0987')
+        ).toBe('Allocated slot number : 1')
+        done() 
+    })
+})
+
+describe('car park in slot 3', function () {
+    test('carPark', function (done) {
+        expect(parking.carPark('CA-09-IO-1111')
+        ).toBe('Allocated slot number : 3')
+        done() 
+    })
+})
+
+describe('car park if slot is full ', function () {
+    test('carPark', function (done) {
+        expect(parking.carPark('KA-09-HH-0123')
+        ).toBe('Sorry, parking lot is full')
+        done() 
+    })
+})
+
+describe('get slots status length which are 6 slots + 1 header  = 7 ', function () {
+    test('getSlotsStatus', function (done) {
+        expect(parking.getSlotsStatus().length
+        ).toBe(7)
+        done() 
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
