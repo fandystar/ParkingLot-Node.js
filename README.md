@@ -15,7 +15,7 @@ were using as being available. Total parking charge should be calculated as per 
 parking time. Charge applicable is $10 for first 2 hours and $10 for every additional
 hour. "
 
-[![GitHub license](https://img.shields.io/github/license/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/blob/master/LICENSE) [![GitHub last commit](https://img.shields.io/github/last-commit/fandystar/ParkingLot?logo=github)](https://github.com/fandystar/ParkingLot-Node-Js/) ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/fandystar/ParkingLot-Node-Js?logo=snyk&color=red) [![Travis (.org)](https://img.shields.io/travis/fandystar/ParkingLot?logo=travis)](https://travis-ci.com/fandystar/ParkingLot-NodeJs/builds/139851721)
+[![GitHub license](https://img.shields.io/github/license/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/blob/master/LICENSE) [![GitHub last commit](https://img.shields.io/github/last-commit/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-Node-Js/) ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/fandystar/ParkingLot-Node-Js?logo=snyk&color=red) [![Travis (.org)](https://img.shields.io/travis/fandystar/ParkingLot?logo=travis)](https://travis-ci.com/fandystar/ParkingLot-NodeJs/builds/139851721)
 
 ## About Problem
 
@@ -32,8 +32,8 @@ To **design a parking lot system** with ability to :
 
 ## Pre requisites
 
-[![GitHub top language](https://img.shields.io/github/languages/top/fandystar/ParkingLot?label=NodeJS&logo=Node.js)](https://github.com/fandystar/ParkingLot/) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/fandystar/ParkingLot?logo=github&color=teal)](https://github.com/fandystar/ParkingLot/) [![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/fandystar/ParkingLot/master?logo=codefactor&logoColor=white)
-](https://github.com/fandystar/ParkingLot/)
+[![GitHub top language](https://img.shields.io/github/languages/top/fandystar/ParkingLot-NodeJs?label=NodeJS&logo=Node.js)](https://github.com/fandystar/ParkingLot-NodeJs/) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/fandystar/ParkingLot-NodeJs?logo=github&color=teal)](https://github.com/fandystar/ParkingLot-NodeJs/) [![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/fandystar/ParkingLot-NodeJs/master?logo=codefactor&logoColor=white)
+](https://github.com/fandystar/ParkingLot-NodeJs/)
 
 The source code for this project is written using [Node.js](https://nodejs.org/). Make sure you have [Node.js](https://nodejs.org/) installed on your computer before running this application, **if not please install Node.js from [here](https://nodejs.org/en/download/)**.
 
@@ -104,13 +104,13 @@ Slot No.  car No
 ```
 
 
-> **NOTE: Any commands which are not mentioned above will throw an error: `<INPUT> is an invalid command`**
+> **NOTE: Any commands which are not mentioned above will throw an error: `<input> is an invalid command`**
 
 **To view all the commands in terminal, please run `npm run help`**
 
 ## Class - OOPS Approach
 
-[![CodeFactor](https://www.codefactor.io/repository/github/fandystar/parkinglot-NodeJs/badge)](https://www.codefactor.io/repository/github/fandystar/parkinglot) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/275124e731de4f48a7adac2e9984e59f)](https://www.codacy.com/manual/fandystar/ParkingLot-NodeJs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fandystar/ParkingLot-NodeJs&amp;utm_campaign=Badge_Grade)
+[![CodeFactor](https://www.codefactor.io/repository/github/fandystar/ParkingLot-NodeJs/badge)](https://www.codefactor.io/repository/github/fandystar/ParkingLot-NodeJs [![Codacy Badge](https://api.codacy.com/project/badge/Grade/275124e731de4f48a7adac2e9984e59f)](https://www.codacy.com/manual/fandystar/ParkingLot-NodeJs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fandystar/ParkingLot-NodeJs&amp;utm_campaign=Badge_Grade)
 
 There are two classes defined:
 
@@ -202,7 +202,6 @@ Feel free to reach out to me via email. Shoot your doubts at [fandyarayalin@gmai
 
 ## Author
 
-[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/0)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/0)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/1)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/1)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/2)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/2)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/3)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/3)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/4)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/4)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/5)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/5)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/6)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/6)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/7)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/7)
 
 #### [fandy araya lin](https://github.com/fandystar)
 
