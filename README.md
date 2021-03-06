@@ -183,6 +183,9 @@ Go to `coverage/lcov-report` folder and open `index.html`.
 
 
 
+
+Here's the **cheat sheet** for you!
+
 Open terminal and type the following:
 
 Navigates to the root folder.
