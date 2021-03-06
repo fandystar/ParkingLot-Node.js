@@ -24,7 +24,7 @@ To **design a parking lot system** with ability to :
 
 - Park or leave with a given car number
 
-- Calculate parking charge when carleave
+- Calculate parking charge when car leave
 
 - Get slots detail of all cars
 
