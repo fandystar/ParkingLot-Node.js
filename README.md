@@ -91,7 +91,7 @@ Users can interact with the Parking Lot system via a following simple set of com
 
 - **leave {carNumber,parkingHours}**: `leave KA-01-HH-1234 6` will make a certain slot number to be free   and calculate parking charge
 for 6 hours parking
-- **getSlotsStatus**: `status` will their slot details ( slot number and car number )
+- **getSlotsStatus**: `status` will display slot details ( slots number and cars number )
 
 ```bash
 Slot No.  car No 
