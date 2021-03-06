@@ -173,7 +173,7 @@ The current code coverage for the tests are following:
 
 **NOTE:** Code coverage is added to the jest tests (`npm test`) **((https://jestjs.io/)**.
 You can see the code-coverage report in terminal as well as detailed HTML report inside `coverage/` folder.
-Go to `coverage/` folder and open `index.html`.
+Go to `coverage/lcov-report` folder and open `index.html`.
 
 
 ## Dependencies Used

@@ -64,6 +64,7 @@ const processCommands = (input) => {
             }
     openInteractiveConsole()
 }
+
 const openInteractiveConsole =  ()=> {
     let prompts = readLine.createInterface({
         input: process.stdin,
