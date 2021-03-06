@@ -15,7 +15,7 @@ were using as being available. Total parking charge should be calculated as per 
 parking time. Charge applicable is $10 for first 2 hours and $10 for every additional
 hour. "
 
-[![GitHub license](https://img.shields.io/github/license/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/blob/main/LICENSE) [![GitHub last commit](https://img.shields.io/github/last-commit/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/) ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/fandystar/ParkingLot-NodeJs?logo=snyk&color=red) [![Travis (.org)](https://img.shields.io/travis/fandystar/ParkingLot?logo=travis)](https://travis-ci.com/fandystar/ParkingLot-NodeJs/builds/139851721)
+[![GitHub license](https://img.shields.io/github/license/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/blob/master/LICENSE) [![GitHub last commit](https://img.shields.io/github/last-commit/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/) ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/fandystar/ParkingLot-NodeJs?logo=snyk&color=red) [![Travis (.org)](https://img.shields.io/travis/fandystar/ParkingLot?logo=travis)](https://travis-ci.com/fandystar/ParkingLot-NodeJs/builds/139851721)
 
 ## About Problem
 
@@ -32,7 +32,7 @@ To **design a parking lot system** with ability to :
 
 ## Pre requisites
 
-[![GitHub top language](https://img.shields.io/github/languages/top/fandystar/ParkingLot-NodeJs?label=NodeJS&logo=Node.js)](https://github.com/fandystar/ParkingLot-NodeJs/) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/fandystar/ParkingLot-NodeJs?logo=github&color=teal)](https://github.com/fandystar/ParkingLot-NodeJs/) [![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/fandystar/ParkingLot-NodeJs/main?logo=codefactor&logoColor=white)
+[![GitHub top language](https://img.shields.io/github/languages/top/fandystar/ParkingLot-NodeJs?label=NodeJS&logo=Node.js)](https://github.com/fandystar/ParkingLot-NodeJs/) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/fandystar/ParkingLot-NodeJs?logo=github&color=teal)](https://github.com/fandystar/ParkingLot-NodeJs/) [![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/fandystar/ParkingLot-NodeJs/master?logo=codefactor&logoColor=white)
 ](https://github.com/fandystar/ParkingLot-NodeJs/)
 
 The source code for this project is written using [Node.js](https://nodejs.org/). Make sure you have [Node.js](https://nodejs.org/) installed on your computer before running this application, **if not please install Node.js from [here](https://nodejs.org/en/download/)**.
