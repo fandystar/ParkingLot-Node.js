@@ -108,7 +108,7 @@ Slot No.  car No
 
 **To view all the commands in terminal, please run `npm run help`**
 
-## Modules - OOPS Approach
+## Class - OOPS Approach
 
 [![CodeFactor](https://www.codefactor.io/repository/github/fandystar/parkinglot-NodeJs/badge)](https://www.codefactor.io/repository/github/fandystar/parkinglot) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/275124e731de4f48a7adac2e9984e59f)](https://www.codacy.com/manual/fandystar/ParkingLot-NodeJs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fandystar/ParkingLot-NodeJs&amp;utm_campaign=Badge_Grade)
 
