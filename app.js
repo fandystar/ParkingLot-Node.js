@@ -64,6 +64,19 @@ const processCommands = (input) => {
             }
     openInteractiveConsole()
 }
+const openInteractiveConsole =  ()=> {
+    let prompts = readLine.createInterface({
+        input: process.stdin,
+        output: process.stdout,
+        terminal: false
+    })
+
+    if (interactiveMode) {
+        prompts.question('Input: ', function (data) {
+            processCommands(data)
+        })
+    }
+}
 
 if (commandLineInputs[commandLineInputs.length - 1].endsWith('.txt')) {
     interactiveMode = false;
@@ -83,19 +96,7 @@ else {
     openInteractiveConsole()
 }
 
-const openInteractiveConsole =  ()=> {
-    let prompts = readLine.createInterface({
-        input: process.stdin,
-        output: process.stdout,
-        terminal: false
-    })
 
-    if (interactiveMode) {
-        prompts.question('Input: ', function (data) {
-            processCommands(data)
-        })
-    }
-}
 
 
 

@@ -4,7 +4,7 @@
   "description": "parking lot",
   "main": "app.js",
   "scripts": {
-    "start": "node . data/input.txt",
+    "start": "node .",
     "test": "NODE_ENV=test jest  --coverage --detectOpenHandles --forceExit"
   },
   "author": "fandy araya lin",
