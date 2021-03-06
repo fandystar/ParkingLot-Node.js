@@ -30,7 +30,7 @@ ParkingLot.prototype.carPark = (carNumber) => {
 
 ParkingLot.prototype.carLeave = (carNumber,hours) => {
   let index=+this.slots.findIndex(slot=>slot===carNumber)
-  if (index ===-1) return `Registration number $  {carNumber} not found`
+  if (index ===-1) return `Registration number ${carNumber} not found`
   this.slots[index] = 'free'
   return `Registration number ${carNumber} with Slot Number ${++index} is free with Charge ${parkingCharge(hours)}`
 } 

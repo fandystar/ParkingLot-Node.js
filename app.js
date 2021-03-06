@@ -29,7 +29,7 @@ const processCommands = (input) => {
             break
         case 'park':
             try {
-                if(!carNumber) throw new Error('car park : Please provide car number')
+                if(!carNumber) throw new Error('Car park : Please provide car number')
                 print(parking.carPark(carNumber))
             }
             catch (err) {
@@ -38,7 +38,8 @@ const processCommands = (input) => {
             break
         case 'leave':
             try {
-                if(!parkingHours) throw new Error('car leave : Please provide parking hours')
+                if(!carNumber) throw new Error('Car leave : Please provide car number & parking hours')
+                if(!parkingHours) throw new Error('Car leave : Please provide parking hours')
                 print(parking.carLeave(carNumber,parkingHours))
             }
             catch (err) {

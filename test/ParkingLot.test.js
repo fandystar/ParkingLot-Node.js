@@ -103,15 +103,15 @@ describe('car leave from slot 1', function () {
 
 describe('car leave from slot 3', function () {
     test('carLeave', function (done) {
-        expect(parking.carLeave('KA-01-BB-0001',4)
-        ).toBe('Registration number KA-01-BB-0001 with Slot Number 3 is free with Charge 30')
+        expect(parking.carLeave('KA-01-BB-0001',6)
+        ).toBe('Registration number KA-01-BB-0001 with Slot Number 3 is free with Charge 50')
         done() 
     })
 })
 
 describe('car leave if car number not registered', function () {
     test('carLeave', function (done) {
-        expect(parking.carLeave('DL-12-AA-9999',4)
+        expect(parking.carLeave('DL-12-AA-9999',2)
         ).toBe('Registration number DL-12-AA-9999 not found')
         done() 
     })
