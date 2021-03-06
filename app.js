@@ -19,48 +19,49 @@ const processCommands = (input) => {
     switch (command) {
         case 'create_parking_lot':
             try {
-                let slotsCapacity =input.split(' ')[1]
-                if (slotsCapacity<=0) throw new Error ('Minimum one slot is required to create parking slot') 
-                print(parking.setSlotsCapacity(slotsCapacity))
+                    let slotsCapacity =input.split(' ')[1]
+                    if (slotsCapacity<=0) throw new Error ('Minimum one slot is required to create parking slot') 
+                    print(parking.setSlotsCapacity(slotsCapacity))
             }
             catch (err) {
-                print(err.message)
+                    print(err.message)
             }
             break
         case 'park':
             try {
-                if(!carNumber) throw new Error('Car park : Please provide car number')
-                print(parking.carPark(carNumber))
+                    if(!carNumber) throw new Error('Car park : Please provide car number')
+                    print(parking.carPark(carNumber))
             }
             catch (err) {
-                print(err.message)
+                    print(err.message)
             }
             break
         case 'leave':
             try {
-                if(!carNumber) throw new Error('Car leave : Please provide car number & parking hours')
-                if(!parkingHours) throw new Error('Car leave : Please provide parking hours')
-                print(parking.carLeave(carNumber,parkingHours))
-            }
+                    if(!carNumber) throw new Error('Car leave : Please provide car number & parking hours')
+                    if(!parkingHours) throw new Error('Car leave : Please provide parking hours')
+                    (/[0-9]/.test(parkingHours) && parkingHours >=0) ? print(parking.carLeave(carNumber,parkingHours)) :
+                    print('Car leave : Please provide positive number >= 0')
+                }
             catch (err) {
-                print(err.message)
+                    print(err.message)
             }
             break
         case 'status':
             try {
-                 parking.getSlotsStatus().length > 1 ? print(parking.getSlotsStatus().join('\n')) : print('Sorry, parking lot is empty')
+                    parking.getSlotsStatus().length > 1 ? print(parking.getSlotsStatus().join('\n')) : print('Sorry, parking lot is empty')
             }
             catch (err) {
-                print(err.message);
+                    print(err.message);
             }
             break
         case 'exit':
-			process.exit(0)
-			break
+                    process.exit(0)
+                    break
         default:
-            print(input, 'is an invalid command')
-            break
-    }
+                    print(input, 'is an invalid command')
+                    break
+            }
     openInteractiveConsole()
 }
 
