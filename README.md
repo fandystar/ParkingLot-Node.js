@@ -28,18 +28,18 @@ node . data/input.txt   ( option 3 )
 B. Components ( OOP approach )
 
 1.  functional class :
-1.1 ParkingLot { constructor : slots}
+1.1 ParkingLot { constructor : slotsCapacity}
 1.2 Car { constructor : carNumber}
 
 2. List of ParkingLot's class methods :
 2.1. setSlotsCapacity : change slots capacity
 2.2. carPark : allocate the nearest slot to the incoming car
-2.3. carLeave : make slot the outcoming car to be 'free'
+2.3. carLeave : make slot the leaving car to be 'free'
 2.4  getSlotssStatus : display slot details (slot number and 
 registration number )
 
 
 3. List of Utils ( helper function ) :
-3.1. parkingCharge : calculate parking charge based parking hours ( car leave )
+3.1. parkingCharge : calculate parking charge based parking hours for the leaving car
 
 

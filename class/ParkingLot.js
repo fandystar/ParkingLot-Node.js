@@ -9,16 +9,16 @@ function ParkingLot(slots=[]) {
 
 const {log} =console
 
-ParkingLot.prototype.setSlotsCapacity =function (slotsCapacity) {
+ParkingLot.prototype.setSlotsCapacity  = (slotsCapacity) =>{
     this.slotsCapacity=+slotsCapacity
     this.slots=new Array(this.slotsCapacity).fill('free')
     return `Created parking lot with ${this.slotsCapacity} slots`
   }
 
 
-ParkingLot.prototype.carPark = function(carNumber) {
-    let totalFree=this.slots.filter(slot=>slot ==='free').length
-    if (totalFree>0) {
+ParkingLot.prototype.carPark = (carNumber) => {
+    let totalFreeSlots=this.slots.filter(slot=>slot ==='free').length
+    if (totalFreeSlots>0) {
       let index=this.slots.findIndex(slot=>slot==='free')
       let car =new Car(carNumber)
       this.slots[index] = car.Number
@@ -28,14 +28,14 @@ ParkingLot.prototype.carPark = function(carNumber) {
     }
   }
 
-ParkingLot.prototype.carLeave = function(carNumber,hours) {
+ParkingLot.prototype.carLeave = (carNumber,hours) => {
   let index=+this.slots.findIndex(slot=>slot===carNumber)
   if (index ===-1) return `Registration number ${carNumber} not found`
   this.slots[index] = 'free'
   return `Registration number ${carNumber} with Slot Number ${++index} is free with Charge ${parkingCharge(hours)}`
 } 
   
-ParkingLot.prototype.getSlotsStatus=function(){
+ParkingLot.prototype.getSlotsStatus=()=>{
     let arr =[] 
     arr.push('Slot No. Registration No.') 
     this.slots.forEach((slot,index)=>{
