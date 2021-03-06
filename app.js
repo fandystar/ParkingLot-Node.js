@@ -11,14 +11,16 @@ let parking= new ParkingLot()
 
 clear()
 
-function processCommands (input) {
+const processCommands = (input) => {
 	let command = input.split(' ')[0]
-	let slotsCapacity =input.split(' ')[1]
-    let carNumber = input.split(' ')[1]
+	let carNumber = input.split(' ')[1]
     let parkingHours=input.split(' ')[2]
+        
     switch (command) {
         case 'create_parking_lot':
             try {
+                let slotsCapacity =input.split(' ')[1]
+                if (slotsCapacity<=0) throw new Error ('Minimum one slot is required to create parking slot') 
                 print(parking.setSlotsCapacity(slotsCapacity))
             }
             catch (err) {
@@ -27,6 +29,7 @@ function processCommands (input) {
             break
         case 'park':
             try {
+                if(!carNumber) throw new Error('car park : Please provide car number')
                 print(parking.carPark(carNumber))
             }
             catch (err) {
@@ -35,6 +38,7 @@ function processCommands (input) {
             break
         case 'leave':
             try {
+                if(!parkingHours) throw new Error('car leave : Please provide parking hours')
                 print(parking.carLeave(carNumber,parkingHours))
             }
             catch (err) {
@@ -77,7 +81,7 @@ else {
     openInteractiveConsole()
 }
 
-function openInteractiveConsole () {
+const openInteractiveConsole =  ()=> {
     let prompts = readLine.createInterface({
         input: process.stdin,
         output: process.stdout,

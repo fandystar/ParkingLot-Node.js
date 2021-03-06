@@ -17,8 +17,8 @@ ParkingLot.prototype.setSlotsCapacity  = (slotsCapacity) =>{
 
 
 ParkingLot.prototype.carPark = (carNumber) => {
-    let totalFreeSlots=this.slots.filter(slot=>slot ==='free').length
-    if (totalFreeSlots>0) {
+  let totalFreeSlots=this.slots.filter(slot=>slot ==='free').length
+  if (totalFreeSlots>0) {
       let index=this.slots.findIndex(slot=>slot==='free')
       let car =new Car(carNumber)
       this.slots[index] = car.Number
@@ -30,7 +30,7 @@ ParkingLot.prototype.carPark = (carNumber) => {
 
 ParkingLot.prototype.carLeave = (carNumber,hours) => {
   let index=+this.slots.findIndex(slot=>slot===carNumber)
-  if (index ===-1) return `Registration number ${carNumber} not found`
+  if (index ===-1) return `Registration number $  {carNumber} not found`
   this.slots[index] = 'free'
   return `Registration number ${carNumber} with Slot Number ${++index} is free with Charge ${parkingCharge(hours)}`
 } 
