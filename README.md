@@ -15,8 +15,7 @@ were using as being available. Total parking charge should be calculated as per 
 parking time. Charge applicable is $10 for first 2 hours and $10 for every additional
 hour. "
 
-[![GitHub license](https://img.shields.io/github/license/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/blob/main/LICENSE) [![GitHub last commit](https://img.shields.io/github/last-commit/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/) ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/fandystar/ParkingLot-NodeJs?logo=snyk&color=red) [![Travis (.org)](https://img.shields.io/travis/fandystar/ParkingLot?logo=travis)](https://travis-ci.com/fandystar/ParkingLot-NodeJs/builds/139851721)
-
+[![GitHub last commit](https://img.shields.io/github/last-commit/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/) ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/fandystar/ParkingLot-NodeJs?logo=snyk&color=red) 
 ## About Problem
 
 To **design a parking lot system** with ability to :
