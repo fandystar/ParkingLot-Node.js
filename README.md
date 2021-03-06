@@ -117,20 +117,20 @@ There are two classes defined:
 `ParkingLot()`: It is the main class which is used to initialize a parking lot. In each parking lot there is maximum number of slots and an array of slots that will be occupied by the car. It has following methods:
 
 - `createParkingLot(slotsCapacity)` : Creates a parking lot with given input. It throws an error `Minimum one slot is required to create parking slot` if zero or negative number (n <= 0) is provided as an input.
-
-- `parkCar(input)` : Allocates nearest slot from entry gate to the car. It can throw following errors:
-
+ 
     - `Minimum one slot is required to create parking slot` : When parking lot is not initialized.
+
+   
+- `carPark(input)` : Allocates nearest slot from entry gate to the car. It can throw following errors:
 
     - `Sorry, parking lot is full` : When parking lot has reached its maximum capacity.
 
+ 
+- `carLeave(input)` : Removes car in given slot in parking lot. It throws following errors:
+    
     - `Please provide car number and parking hours` : When input contains either of two i.e. car number and parking hours
 
-- `leaveCar(input)` : Removes car in given slot in parking lot. It throws following errors:
-
-  - `Sorry, parking lot is empty` if parking lot is empty.
-
-  - `Slot number <CAR NUMBER> is not found` when slot number is absent.
+    - `Slot number <CAR NUMBER> is not found` when slot number is absent.
 
 
 - `getSlotsStatus()` : Returns an array containing slot number and car number. It throws an error `Sorry, parking lot is empty` if parking lot is empty.
@@ -185,24 +185,18 @@ Go to `coverage/` folder and open `index.html`.
 
 
 
-## Screenshots
-
-Please go to `screenshots/` folder to find screenshots of running **Parking Lot** console application. 
-
-
-
 Open terminal and type the following:
 
-1. `cd parking_lot` : Navigates to the `parking_lot` root folder.
+Navigates to the root folder.
 
-2. `npm install` : Installs all the dependencies.
+1. `npm install` : Installs all the dependencies.
 
-3. `npm start` : Starts the console application in interactive mode.
+2. `npm start` : Starts the console application in interactive mode.
 
-4. `npm test` : Runs unit tests.
+3. `npm test` : Runs unit tests.
 
 
-Feel free to reach out to me via email. Shoot your doubts at [fandystar@gmail.com](mailto:fandyarayalin@gmail.com?Subject=ParkingLot).
+Feel free to reach out to me via email. Shoot your doubts at [fandyarayalin@gmail.com](mailto:fandyarayalin@gmail.com?Subject=ParkingLot).
 
 > Glad to see you here! **Show some ❤️ by starring [this](https://github.com/fandystar/ParkingLot-NodeJs/) repository.**
 
@@ -210,11 +204,8 @@ Feel free to reach out to me via email. Shoot your doubts at [fandystar@gmail.co
 
 [![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot/images/0)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/0)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot/images/1)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/1)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/2)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/2)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/3)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/3)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/4)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/4)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/5)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/5)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/6)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/6)[![](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/images/7)](https://sourcerer.io/fame/fandystar/fandystar/ParkingLot-NodeJs/links/7)
 
-#### [Vinit Shahdeo](https://github.com/fandystar)
+#### [fandy araya lin](https://github.com/fandystar)
 
 [![GitHub followers](https://img.shields.io/github/followers/fandystar.svg?label=Follow%20@fandystar&style=social)](https://github.com/fandystar/)
 
-
-
-[![NETFLIX](https://forthebadge.com/images/badges/powered-by-netflix.svg)](https://github.com/fandystar) [![SMILE](https://forthebadge.com/images/badges/makes-people-smile.svg)](https://github.com/fandystar) [![BUILT WITH LOVE](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/fandystar)
 
