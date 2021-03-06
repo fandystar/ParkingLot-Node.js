@@ -90,9 +90,9 @@ Users can interact with the Parking Lot system via a following simple set of com
 
 - **park {carNumber}**: `park KA-01-HH-1234` will allocate the nearest slot from entry gate.
 
-- **leave {carNumber,parkingHours}**: `leaveKA-01-HH-1234` will make a certain slot number to be free.
+- **leave {carNumber,parkingHours}**: `leave KA-01-HH-1234` will make a certain slot number to be free   and calculate parking charge
 
-- **status**: `status` will their slot details ( slot number and car number )
+- **getSlotsStatus**: `status` will their slot details ( slot number and car number )
 
 ```bash
 Slot No.  car No 
