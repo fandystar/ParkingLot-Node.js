@@ -56,6 +56,10 @@ This is a console application written in `Node.js`. This can be run in two modes
 
 **Proceed to the steps below only if you've `Node.js` installed.** If not, please refer [pre requisites](#pre-requisites) section.
 
+#### Running Screenshots
+
+Please go to `running_screenshots/` folder to find screenshots of running **Parking Lot** 
+
 #### For Interactive Mode
 
 Open terminal and navigate (`cd`) to this folder and type the following commands:

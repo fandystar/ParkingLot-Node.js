@@ -9,12 +9,12 @@ let interactiveMode = false
 const ParkingLot = require('./class/ParkingLot')
 let parking= new ParkingLot()
 
-clear()
+//clear()
 
 const processCommands = (input) => {
 	let command = input.split(' ')[0]
 	let carNumber = input.split(' ')[1]
-    let parkingHours=input.split(' ')[2]
+    let parkingHours=+input.split(' ')[2]
         
     switch (command) {
         case 'create_parking_lot':
@@ -38,9 +38,9 @@ const processCommands = (input) => {
             break
         case 'leave':
             try {
-                    if(!carNumber) throw new Error('Car leave : Please provide car number & parking hours')
-                    if(!parkingHours) throw new Error('Car leave : Please provide parking hours')
-                    (/[0-9]/.test(parkingHours) && parkingHours >=0) ? print(parking.carLeave(carNumber,parkingHours)) :
+                    if(!carNumber) {throw new Error('Car leave : Please provide car number & parking hours')}
+                    if(!parkingHours) {throw new Error('Car leave : Please provide parking hours')}
+                     (/[0-9]/.test(parkingHours) && parkingHours >=0) ? print(parking.carLeave(carNumber,parkingHours)) :
                     print('Car leave : Please provide positive number >= 0')
                 }
             catch (err) {
