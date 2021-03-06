@@ -136,7 +136,7 @@ There are two classes defined:
 
 `Car()`
 
-- `new Car(carNumber)` : Constructor used to initialize a car object containing 1 field, car nunber
+- `new Car(carNumber)` : Constructor used to initialize a car object containing 1 field, car number
 
 
 **Note:** *I've made an assumption that the car number for cars can never be same.*
