@@ -147,10 +147,13 @@ Tests are written using [Jest](https://jestjs.io) and can be run using `npm test
 
 - `npm test` : Run unit tests only (Tests for functions in Parking lot Class)
 
+#### Test Screenshots
+
+Please go to `screenshots/` folder to find screenshots of testing **Parking Lot**  
+
 #### Unit tests
 
 Unit tests are written for the methods of `ParkingLot` class.
-
 
 #### Code Coverage
 
