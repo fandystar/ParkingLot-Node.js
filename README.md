@@ -20,11 +20,11 @@ hour. "
 
 To **design a parking lot system** with ability to :
 
-- create a number of parking slots ( free to park )
+- Create a number of parking slots ( free to park )
 
-- park or leave with a given car number
+- Park or leave with a given car number
 
-- Parking charge when carleave
+- Calculate parking charge when carleave
 
 - Get slots detail of all cars
 
