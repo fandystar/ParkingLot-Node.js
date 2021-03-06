@@ -86,11 +86,11 @@ node app.js <path_to_file.txt>
 
 Users can interact with the Parking Lot system via a following simple set of commands which produce a specific output:
 
-- **create_parking_lot**: `create_parking_lot 6` will create a parking lot with 6 slots.
+- **create_parking_lot {slotsCapacity}**: `create_parking_lot 6` will create a parking lot with 6 slots.
 
-- **park < car NUMBER >**: `park KA-01-HH-1234` will allocate the nearest slot from entry gate.
+- **park {carNumber}**: `park KA-01-HH-1234` will allocate the nearest slot from entry gate.
 
-- **leave**: `leaveKA-01-HH-1234` will make a certain slot number to be free.
+- **leave {carNumber,parkingHours}**: `leaveKA-01-HH-1234` will make a certain slot number to be free.
 
 - **status**: `status` will their slot details ( slot number and car number )
 
