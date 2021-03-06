@@ -87,11 +87,12 @@ Users can interact with the Parking Lot system via a following simple set of com
 
 - **create_parking_lot {slotsCapacity}**: `create_parking_lot 6` will create a parking lot with 6 slots.
 
-- **park {carNumber}**: `park KA-01-HH-1234` will allocate the nearest slot from entry gate.
+- **park {carNumber}**: `park KA-01-HH-1234` will allocate car to  the nearest slot from entry gate.
 
-- **leave {carNumber,parkingHours}**: `leave KA-01-HH-1234 6` will make a certain slot number to be free   and calculate parking charge
+- **leave {carNumber,parkingHours}**: `leave KA-01-HH-1234 6` will make car parking slot to be free  and calculate parking charge
 for 6 hours parking
-- **getSlotsStatus**: `status` will display slot details ( slots number and cars number )
+
+- **getSlotsStatus**: `status` will display all slot details ( slot number and car number )
 
 ```bash
 Slot No.  car No 
@@ -106,7 +107,7 @@ Slot No.  car No
 > **NOTE: Any commands which are not mentioned above will throw an error: `<input> is an invalid command`**
 
 
-## Class - OOPS Approach
+## Class - OOPs Approach
 [![CodeFactor](https://www.codefactor.io/repository/github/fandystar/parkinglot-nodejs/badge)](https://www.codefactor.io/repository/github/vinitshahdeo/parkinglot-nodejs) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/275124e731de4f48a7adac2e9984e59f)](https://www.codacy.com/manual/fandystar/ParkingLot-NodeJs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fandystar/ParkingLot-NodeJs&amp;utm_campaign=Badge_Grade)
 
 There are two classes defined:
