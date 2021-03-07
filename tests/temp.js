@@ -78,7 +78,7 @@ describe('car leave from slot 6', function () {
 })
 
 describe('get slots status length which are 5 slots + 1 header  = 6 ', function () {
-    test('parkingSlotsStatus', function (done) {
+    test('getSlotsStatus', function (done) {
         expect(parking.parkingSlotsStatus().length
         ).toBe(6)
         done() 

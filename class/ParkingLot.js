@@ -7,14 +7,13 @@ const {log} =console
 class ParkingLot {   // base class
   constructor() {
     this.parkingSlots=new Array()  // arrray for parking slots 
-    this.parkingLotCapacity=0 
+    this.parkingLotCapacity
   }  
   
-  // input  = user's input via terminal
   createParkingLot(input) {  
     
     this.parkingLotCapacity=+input.split(' ')[1]
-    if (this.parkingLotCapacity<=0) throw new Error( 'Minimum one slot is required to create parking lot' )
+    if (this.parkingLotCapacity<=0) {throw new Error( 'Minimum one slot is required to create parking lot' )}
     this.parkingSlots=new Array(this.parkingLotCapacity).fill('available')
     return this.parkingLotCapacity
   
@@ -25,7 +24,7 @@ class ParkingLot {   // base class
     let carNumber = input.split(' ')[1]
     
     if (this.parkingSlots.length===0) throw new Error('Sorry, parking lot is not created yet'  )
-    if(!carNumber) throw new Error( 'Car park : Please provide car number')
+    if(!carNumber) {throw new Error( 'Car park : Please provide car number')}
     let totalAvailableSlots=this.parkingSlots.filter(slot=>slot ==='available').length
     if (totalAvailableSlots>0) {
         let index=this.parkingSlots.findIndex(slot=>slot==='available')
@@ -47,7 +46,7 @@ class ParkingLot {   // base class
     if(!parkingTime) {throw new Error('Car leave : Please provide parkinngTime')}
     if (!/[0-9]/.test(parkingTime) && parkingTime < 0) throw new Error('Car leave : Please provide parking time with positive number >= 0')
     let index=+this.parkingSlots.findIndex(slot=>slot===carNumber)
-    if (index ===-1) throw new Error( `Registration number ${carNumber} not found`)
+    if (index ===-1) {throw new Error( `Registration number ${carNumber} not found`)}
     this.parkingSlots[index] = 'available'
     return [++index,parkingCharge(parkingTime)]
   
