@@ -9,28 +9,30 @@ let interactiveMode = false
 const ParkingLot = require('./class/ParkingLot')
 let parking= new ParkingLot()
 
-//clear()
+clear()
 
 const processCommands = (input) => {
-	let command = input.split(' ')[0]
-	let carNumber = input.split(' ')[1]
-    let parkingHours=+input.split(' ')[2]
-        
-    switch (command) {
+	
+    let command = input.split(' ')[0]
+    let parkingLotCapacity 
+    let carNumber
+    let parkingSlotNumber
+    let parkingCharge
+    let arr
+	switch (command) {
         case 'create_parking_lot':
             try {
-                    let slotsCapacity =input.split(' ')[1]
-                    if (slotsCapacity<=0) throw new Error ('Minimum one slot is required to create parking slot') 
-                    print(parking.setSlotsCapacity(slotsCapacity))
-            }
+                    parkingLotCapacity = parking.createParkingLot(input)
+                    print(`Created parking lot with ${parkingLotCapacity} slots`)
+                }
             catch (err) {
                     print(err.message)
-            }
+                }
             break
         case 'park':
             try {
-                    if(!carNumber) throw new Error('Car park : Please provide car number')
-                    print(parking.carPark(carNumber))
+                    parkingSlotNumber = parking.carPark(input)
+                    print(`Allocated slot number : ${parkingSlotNumber}`)
             }
             catch (err) {
                     print(err.message)
@@ -38,10 +40,11 @@ const processCommands = (input) => {
             break
         case 'leave':
             try {
-                    if(!carNumber) {throw new Error('Car leave : Please provide car number & parking hours')}
-                    if(!parkingHours) {throw new Error('Car leave : Please provide parking hours')}
-                     (/[0-9]/.test(parkingHours) && parkingHours >=0) ? print(parking.carLeave(carNumber,parkingHours)) :
-                    print('Car leave : Please provide positive number >= 0')
+                    arr = parking.carLeave(input)
+                    carNumber =input.split(' ')[1]
+                    parkingSlotNumber = arr[0]
+                    parkingCharge =arr[1]
+                    print(`Registration number ${carNumber} with Slot Number ${parkingSlotNumber} is free with Charge ${parkingCharge}`)
                 }
             catch (err) {
                     print(err.message)
@@ -49,7 +52,7 @@ const processCommands = (input) => {
             break
         case 'status':
             try {
-                    parking.getSlotsStatus().length > 1 ? print(parking.getSlotsStatus().join('\n')) : print('Sorry, parking lot is empty')
+                    parking.parkingSlotsStatus().length > 1 ? print(parking.parkingSlotsStatus().join('\n')) : print('Sorry, parking lot is empty')
             }
             catch (err) {
                     print(err.message);

@@ -85,13 +85,13 @@ Please go to `screenshots/running` folder to find screenshots of running **Parki
 
 Users can interact with the Parking Lot system via a following simple set of commands which produce a specific output:
 
-- **create_parking_lot  {slotsCapacity}**: `create_parking_lot 6` will create a parking lot with 6 slots.
+- **create_parking_lot  {parkingLotCapacity}**: `create_parking_lot 6` will create a parking lot with 6 slots.
 
 - **park  {carNumber}**: `park KA-01-HH-1234` will allocate car to  the nearest slot from entry gate.
 
-- **leave  {carNumber,parkingHours}**: `leave KA-01-HH-1234 6` will make car parking slot to be available  and calculate parking charge based parking hours ( 6 hours )
+- **leave  {carNumber,parkingTime}**: `leave KA-01-HH-1234 6` will make car parking slot to be available  and calculate parking charge based parking hours ( 6 hours ).
 
-- **getSlotsStatus**: `status` will display all slot details ( slot number and car number )
+- **status**: `status` will display all slot details ( slot number and car number ).
 
 ```bash
 Slot No.  Registration  No. 
@@ -112,7 +112,7 @@ There are two classes defined:
 
 `ParkingLot()`: It is the main class which is used to initialize a parking lot. In each parking lot there is maximum number of slots and an array of slots that will be occupied by the car. It has following methods:
 
-- `setSlotsCapacity(input)` : Creates a parking lot with given input. It throws an error `Minimum one slot is required to create parking slot` 
+- `setParkingLotCapacity(input)` : Creates a parking lot with given capacity input. It throws an error `Minimum one slot is required to create parking slot` 
  
     - `Minimum one slot is required to create parking slot` : When parking lot is not greater than or equal to one ( 1 slot )
 

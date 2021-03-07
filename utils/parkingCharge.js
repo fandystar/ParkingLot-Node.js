@@ -1,6 +1,6 @@
 
-const parkingCharge = (hours) => {
-    return (hours<=2?10:10+(hours-2)*10)
+const parkingCharge = (parkingTime) => {
+    return (parkingTime<=2?10:10+(parkingTime-2)*10)
   }
 
 module.exports =parkingCharge  

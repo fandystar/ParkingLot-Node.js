@@ -4,44 +4,64 @@ const parkingCharge = require('../utils/parkingCharge')
 
 const {log} =console
 
-class ParkingLot {
-  constructor(slots=[]) {
-    this.slots=slots
+class ParkingLot {   // base class
+  constructor() {
+    this.parkingSlots=new Array()  // arrray for parking slots 
+    this.parkingLotCapacity=0 
   }  
   
-  setSlotsCapacity(slotsCapacity) {
-    this.slotsCapacity=+slotsCapacity
-    this.slots=new Array(this.slotsCapacity).fill('available')
-    return `Created parking lot with ${this.slotsCapacity} slots`
+  // input  = user's input via terminal
+  createParkingLot(input) {  
+    
+    this.parkingLotCapacity=+input.split(' ')[1]
+    if (this.parkingLotCapacity<=0) throw new Error( 'Minimum one slot is required to create parking lot' )
+    this.parkingSlots=new Array(this.parkingLotCapacity).fill('available')
+    return this.parkingLotCapacity
+  
   }
   
-  carPark(carNumber) {
-    if (this.slots.length===0) return 'Sorry, parking lot is not created yet'  
-    let totalFreeSlots=this.slots.filter(slot=>slot ==='available').length
-    if (totalFreeSlots>0) {
-        let index=this.slots.findIndex(slot=>slot==='available')
+  carPark(input) {
+    
+    let carNumber = input.split(' ')[1]
+    
+    if (this.parkingSlots.length===0) throw new Error('Sorry, parking lot is not created yet'  )
+    if(!carNumber) throw new Error( 'Car park : Please provide car number')
+    let totalAvailableSlots=this.parkingSlots.filter(slot=>slot ==='available').length
+    if (totalAvailableSlots>0) {
+        let index=this.parkingSlots.findIndex(slot=>slot==='available')
         let car =new Car(carNumber)
-        this.slots[index] = car.carNumber
-        return `Allocated slot number : ${++index}`
-      } else {
-        return 'Sorry, parking lot is full'
+        this.parkingSlots[index] = car.carNumber
+        return ++index
+    } else {
+        throw new Error('Sorry, parking lot is full')
       }
+  
     }
 
-  carLeave(carNumber,hours){
-    let index=+this.slots.findIndex(slot=>slot===carNumber)
-    if (index ===-1) return `Registration number ${carNumber} not found`
-    this.slots[index] = 'available'
-    return `Registration number ${carNumber} with Slot Number ${++index} is free with Charge ${parkingCharge(hours)}`
+  carLeave(input){
+    
+    let carNumber = input.split(' ')[1]
+    let parkingTime = +input.split(' ')[2]
+    
+    if(!carNumber) {throw new Error('Car leave : Please provide car number & parkinngTime')}
+    if(!parkingTime) {throw new Error('Car leave : Please provide parkinngTime')}
+    if (!/[0-9]/.test(parkingTime) && parkingTime < 0) throw new Error('Car leave : Please provide parking time with positive number >= 0')
+    let index=+this.parkingSlots.findIndex(slot=>slot===carNumber)
+    if (index ===-1) throw new Error( `Registration number ${carNumber} not found`)
+    this.parkingSlots[index] = 'available'
+    return [++index,parkingCharge(parkingTime)]
+  
   } 
   
-  getSlotsStatus(){
+  parkingSlotsStatus(){
+    
     let arr =[] 
+    
     arr.push('Slot No. Registration No.') 
-    this.slots.forEach((slot,index)=>{
+    this.parkingSlots.forEach((slot,index)=>{
           if (slot!=='available') {
           let number = index+1
-          arr.push(number + '.  ' + this.slots[index]) }
+          arr.push(number + '.  ' + this.parkingSlots[index]) }
         })
     return arr
   } 
