@@ -20,9 +20,9 @@ hour. "
 
 To **design a parking lot system** with ability to :
 
-- Create a number of parking slots ( free to park )
+- Create a number of parking slots ( available to park )
 
-- Park or leave with a given car number
+- Park or leave with a given car number,parking hours
 
 - Calculate parking charge when car leave
 
@@ -56,9 +56,9 @@ This is a console application written in `Node.js`. This can be run in two modes
 
 **Proceed to the steps below only if you've `Node.js` installed.** If not, please refer [pre requisites](#pre-requisites) section.
 
-#### Running Screenshots
+#### Screenshots
 
-Please go to `running_screenshots/` folder to find screenshots of running **Parking Lot** 
+Please go to `screenshots/running` folder to find screenshots of running **Parking Lot** 
 
 #### For Interactive Mode
 
@@ -93,18 +93,17 @@ Users can interact with the Parking Lot system via a following simple set of com
 
 - **park {carNumber}**: `park KA-01-HH-1234` will allocate car to  the nearest slot from entry gate.
 
-- **leave {carNumber,parkingHours}**: `leave KA-01-HH-1234 6` will make car parking slot to be free  and calculate parking charge
-for 6 hours parking
+- **leave {carNumber,parkingHours}**: `leave KA-01-HH-1234 6` will make car parking slot to be available  and calculate parking charge based parking hours ( 6 hours )
 
 - **getSlotsStatus**: `status` will display all slot details ( slot number and car number )
 
 ```bash
-Slot No.  car No 
+Slot No.  Registration  No. 
 1         KA-01-HH-1234  
 2         KA-01-HH-9999  
 3         KA-01-BB-0001  
-5         KA-01-HH-2701  
-6         KA-01-HH-3141  
+4         KA-01-HH-2701  
+5         KA-01-HH-3141  
 ```
 
 
@@ -118,9 +117,9 @@ There are two classes defined:
 
 `ParkingLot()`: It is the main class which is used to initialize a parking lot. In each parking lot there is maximum number of slots and an array of slots that will be occupied by the car. It has following methods:
 
-- `createParkingLot(slotsCapacity)` : Creates a parking lot with given input. It throws an error `Minimum one slot is required to create parking slot` 
+- `setSlotsCapacity(input)` : Creates a parking lot with given input. It throws an error `Minimum one slot is required to create parking slot` 
  
-    - `Minimum one slot is required to create parking slot` : When parking lot is not initialized.
+    - `Minimum one slot is required to create parking slot` : When parking lot is not greater than or equal to one ( 1 slot )
 
    
 - `carPark(input)` : Allocates nearest slot from entry gate to the car. It can throw following errors:
@@ -128,9 +127,9 @@ There are two classes defined:
     - `Sorry, parking lot is full` : When parking lot has reached its maximum capacity.
 
  
-- `carLeave(input)` : Removes car in given slot in parking lot. It throws following errors:
+- `carLeave(input)` : will make car parking slot to be available  and calculate parking charge based parking hours. It throws following errors:
     
-    - `Please provide car number and parking hours` : When input contains either of two i.e. car number and parking hours
+    - `Please provide car number and parking hours` : When input contains either of two  i.e. car number or parking hours
 
     - `Slot number <carNumber> is not found` when slot number is absent.
 
@@ -151,13 +150,13 @@ Tests are written using [Jest](https://jestjs.io) and can be run using `npm test
 
 - `npm test` : Run unit tests only (Tests for functions in Parking lot Class and parkingCharge function)
 
-#### Test Screenshots
+#### Screenshots
 
-Please go to `test_screenshots/` folder to find screenshots of testing **Parking Lot**  
+Please go to `screenshots/testing` folder to find screenshots of testing **Parking Lot**  
 
 #### Unit tests
 
-Unit tests are written for the methods of `ParkingLot` class.
+Unit tests are written for the methods of `ParkingLot` class and `parkingCharge` function
 
 #### Code Coverage
 
@@ -193,9 +192,10 @@ Go to `coverage/lcov-report` folder and open `index.html`.
 
 Here's the **cheat sheet** for you!
 
+Navigates to the root folder,
+
 Open terminal and type the following:
 
-Navigates to the root folder.
 
 1. `npm install` : Installs all the dependencies.
 
