@@ -2,5 +2,7 @@
 #!/bin/sh
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
-
-node app.js data/input.txt
+echo ---------------------------
+echo running the program
+echo ---------------------------
+node app.js $1
