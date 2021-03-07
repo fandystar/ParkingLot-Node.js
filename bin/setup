@@ -1,2 +1,5 @@
+#!/bin/sh
+
+cd ..
 npm install // install dependencies
 npm test // run unit test
