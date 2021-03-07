@@ -10,14 +10,14 @@ class ParkingLot {   // base class
   }  
   
   createParkingLot(parkingLotCapacity) {  
-    if (+parkingLotCapacity<=0) {throw new Error( 'Minimum one slot is required to create parking lot' )}
+    if (isNaN(+parkingLotCapacity) || (+parkingLotCapacity<=0)) {throw new Error('Please provide parking lot capacity with a postive number greater than zero')}
     this.parkingSlots=new Array(+parkingLotCapacity).fill('available')
     return `Created parking lot with ${parkingLotCapacity} slots`
   }
   
   carPark(carNumber) {
     if (this.parkingSlots.length===0) {throw new Error('Sorry, parking lot is not created yet'  )}
-    if(!carNumber) {throw new Error( 'Car park : Please provide car number')}
+    if(!carNumber) {throw new Error( 'Please provide car number')}
     let totalAvailableSlots=this.parkingSlots.filter(slot=>slot ==='available').length
     if (totalAvailableSlots>0) {
         let index=this.parkingSlots.findIndex(slot=>slot==='available')
@@ -30,9 +30,9 @@ class ParkingLot {   // base class
   }
 
   carLeave(carNumber,parkingTime){
-    if(!carNumber) {throw new Error('Car leave : Please provide car number & parkinngTime')}
-    if(!parkingTime) {throw new Error('Car leave : Please provide parkinngTime')}
-    if (!/[0-9]/.test(parkingTime) && parkingTime < 0) {throw new Error('Car leave : Please provide parking time with positive number >= 0')}
+    if(!carNumber) {throw new Error('Please provide car number & parkingTime')}
+    if(!parkingTime) {throw new Error('Please provide parkingTime')}
+    if (isNaN(+parkingTime) || (+parkingTime <= 0)) {throw new Error('Please provide parking time with a positive number greater than or equal to 0')}
     let index=+this.parkingSlots.findIndex(slot=>slot===carNumber)
     if (index ===-1) {throw new Error( `Registration number ${carNumber} not found`)}
     this.parkingSlots[index] = 'available'
@@ -47,7 +47,7 @@ class ParkingLot {   // base class
           let number = index+1
           arr.push(number + '.  ' + this.parkingSlots[index]) }
         })
-    if (arr.length === 0 ) {throw new Error('Sorry, parking lot is empty')}  
+    if (arr.length === 1 ) {throw new Error('Sorry, parking lot is empty')}  
     return arr
   }
 }

@@ -5,13 +5,6 @@ clear()
 const ParkingLot = require('../class/ParkingLot')
 let parking= new ParkingLot()
 
-// describe('car park but parking lot is not created ', function () {
-//     test('carPark', function (done) {
-//         expect(parking.carPark('KA-01-HH-1234')
-//         ).toBe('Sorry, parking lot is not created yet')
-//         done() 
-//     })
-// })        
 
 describe('Parking lot is not created ', () => {
     test('carPark', () => {
@@ -19,9 +12,9 @@ describe('Parking lot is not created ', () => {
     })
 })
 
-describe('Minimum one slot is required to create parking lot', () => {
-    test('carPark', () => {
-        expect(()=>{parking.createParkingLot(0)}).toThrow(Error)
+describe('Please provide parking lot capacity with a postive number greater than zero', () => {
+    test('createParkinglot', () => {
+        expect(()=>{parking.createParkingLot('saya')}).toThrow(Error)
     })
 })
 
@@ -31,6 +24,12 @@ describe('Created parking lot with 6 slots', function () {
         expect(parking.createParkingLot(6)
         ).toBe('Created parking lot with 6 slots')
         done() 
+    })
+})
+
+describe('Sorry, parking lot is empty', () => {
+    test('status', () => {
+        expect(()=>{parking.parkingSlotsStatus()}).toThrow(Error)
     })
 })
 
@@ -176,11 +175,6 @@ describe('car park in slot 3', function () {
     })
 })
 
-describe(' Sorry, parking lot is full', () => {
-    test('carPark', () => {
-        expect(()=>{parking.carPark('KA-01-HH-1234')}).toThrow(Error)
-    })
-})
 
 describe('get slots status length which are 6 slots + 1 header  = 7 ', function () {
     test('parkingSlotsStatus', function (done) {
@@ -190,3 +184,15 @@ describe('get slots status length which are 6 slots + 1 header  = 7 ', function 
     })
 })
 
+
+describe(' Sorry, parking lot is full', () => {
+    test('carPark', () => {
+        expect(()=>{parking.carPark('KA-01-HH-1234')}).toThrow(Error)
+    })
+})
+
+describe('Please provide parking time with a positive number greater than or equal to 0', () => {
+    test('carLeave', () => {
+        expect(()=>{parking.carLeave('CA-09-IO-1111',-10)}).toThrow(Error)
+    })
+})

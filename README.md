@@ -110,11 +110,12 @@ Slot No.  Registration  No.
 
 There are two classes defined:
 
-`ParkingLot()`: It is the main class which is used to initialize a parking lot. In each parking lot there is maximum number of slots and an array of slots that will be occupied by the car. It has following methods:
+### 1. `ParkingLot()`: 
+It is the main class which is used to initialize a parking lot ,array of slots that will be occupied by the car. It has following methods:
 
 - `createParkingLot(input)` : Creates a parking lot with given capacity input. It throws an error `Minimum one slot is required to create parking slot` 
  
-    - `Minimum one slot is required to create parking slot` : When parking lot is not greater than or equal to one ( 1 slot )
+    - `Please provide parking lot capacity with a postive number greater than zero` : When number input is not greater than or equal to one ( minimun 1 slot ) or input is string
 
    
 - `carPark(input)` : Allocates nearest slot from entry gate to the car. It can throw following errors:
@@ -129,14 +130,14 @@ There are two classes defined:
     - `Please provide car number and parking time` : When input contains either of two or both of them  i.e. car number or parking time
     - `Please provide parking time` : When input contains car number only.
     - `Slot number <carNumber> is not found` when slot number is absent.
-
+    - `Please provide parking time with a positive number greater than or equal to 0` when parking time input is string or negative number
 
 - `parkingSlotsStatus()` : Returns an array containing slot number and car number. It throws an error :
     
-    -`Sorry, parking lot is empty` if parking lot is empty.
+    -`Sorry, parking lot is empty` if there is no car in each slot
 
 
-`Car()`
+### 2. `Car()`
 - `new Car(carNumber)` : Constructor used to initialize a car object containing 1 field, car number
 
 
