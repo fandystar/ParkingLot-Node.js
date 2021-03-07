@@ -3,4 +3,4 @@
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
 
-npm start
+node app.js data/input.txt
