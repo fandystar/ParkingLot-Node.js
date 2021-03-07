@@ -12,50 +12,41 @@ let parking= new ParkingLot()
 clear()
 
 const processCommands = (input) => {
-	
-    let command = input.split(' ')[0]
-    let parkingLotCapacity 
-    let carNumber
-    let parkingSlotNumber
-    let parkingCharge
-    let arr
-	switch (command) {
+	let command = input.split(' ')[0]
+    let parkingLotCapacity = input.split(' ')[1]
+    let carNumber =input.split(' ')[1]
+    let parkingTime = input.split(' ')[2]   
+    switch (command) {
         case 'create_parking_lot':
             try {
-                    parkingLotCapacity = parking.createParkingLot(input)
-                    print(`Created parking lot with ${parkingLotCapacity} slots`)
+                print(parking.createParkingLot(parkingLotCapacity))
                 }
             catch (err) {
-                    print(err.message)
+                print(err.message)
                 }
             break
         case 'park':
             try {
-                    parkingSlotNumber = parking.carPark(input)
-                    print(`Allocated slot number : ${parkingSlotNumber}`)
+                print(parking.carPark(carNumber))
             }
             catch (err) {
-                    print(err.message)
+                print(err.message)
             }
             break
         case 'leave':
             try {
-                    arr = parking.carLeave(input)
-                    carNumber =input.split(' ')[1]
-                    parkingSlotNumber = arr[0]
-                    parkingCharge =arr[1]
-                    print(`Registration number ${carNumber} with Slot Number ${parkingSlotNumber} is free with Charge ${parkingCharge}`)
+                print(parking.carLeave(carNumber,parkingTime))
                 }
             catch (err) {
-                    print(err.message)
+                print(err.message)
             }
             break
         case 'status':
             try {
-                    parking.parkingSlotsStatus().length > 1 ? print(parking.parkingSlotsStatus().join('\n')) : print('Sorry, parking lot is empty')
+                print(parking.parkingSlotsStatus().join('\n'))
             }
             catch (err) {
-                    print(err.message);
+                print(err.message);
             }
             break
         case 'exit':
