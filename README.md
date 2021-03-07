@@ -44,7 +44,7 @@ To check if you have Node.js and NPM installed by running simple commands to see
 
 > **Note:** [Node installer](https://nodejs.org/en/download/) installs both Node.js and npm on your system.
 
-## How to run?
+## 1. How to run?
 
 This is a console application written in `Node.js`. This can be run in two modes:
 
@@ -56,9 +56,6 @@ This is a console application written in `Node.js`. This can be run in two modes
 
 **Proceed to the steps below only if you've `Node.js` installed.** If not, please refer [pre requisites](#pre-requisites) section.
 
-#### Screenshots
-
-Please go to `screenshots/running` folder to find screenshots of running **Parking Lot** 
 
 #### For Interactive Mode
 
@@ -77,6 +74,10 @@ Open terminal and type `node app.js data/input.txt`.
 node app.js <path_to_file.txt>
 ```
 
+#### Screenshots
+
+Please go to `screenshots/running` folder to find screenshots of running **Parking Lot** 
+
 **Note**: You can find a few sample input files inside `data/` folder.
 
 #### Explained
@@ -85,7 +86,7 @@ node app.js <path_to_file.txt>
 
 **STEP 2**: `npm start` or `npm run start` will start the application. It is equivalent to `node app.js`
 
-## List of User Commands
+## 2. List of Commands
 
 Users can interact with the Parking Lot system via a following simple set of commands which produce a specific output:
 
@@ -110,7 +111,7 @@ Slot No.  Registration  No.
 > **NOTE: Any commands which are not mentioned above will throw an error: `<input> is an invalid command`**
 
 
-## Class - OOPs Approach
+## 3. Class - OOPs Approach
 [![CodeFactor](https://www.codefactor.io/repository/github/fandystar/parkinglot-nodejs/badge)](https://www.codefactor.io/repository/github/vinitshahdeo/parkinglot-nodejs) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/275124e731de4f48a7adac2e9984e59f)](https://www.codacy.com/manual/fandystar/ParkingLot-NodeJs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fandystar/ParkingLot-NodeJs&amp;utm_campaign=Badge_Grade)
 
 There are two classes defined:
@@ -144,7 +145,7 @@ There are two classes defined:
 
 **Note:** *I've made an assumption that the car number for cars can never be same.*
 
-## Test Scripts
+## 4. Test Scripts
 
 Tests are written using [Jest](https://jestjs.io) and can be run using `npm test`
 
@@ -182,15 +183,14 @@ You can see the code-coverage report in terminal as well as detailed HTML report
 Go to `coverage/lcov-report` folder and open `index.html`.
 
 
-## Dependencies Used
-
+## 5. Dependencies Used
 
 - [Jest](https://jestjs.io/): A JavaScript test framework for Node.js programs. Learn more [here](https://jestjs.io/).
 
 
 
 
-Here's the **cheat sheet** for you!
+## 6. Cheat Sheet
 
 Navigates to the root folder,
 
