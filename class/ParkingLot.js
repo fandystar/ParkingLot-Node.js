@@ -36,8 +36,6 @@ class ParkingLot {
   } 
   
   getSlotsStatus(){
-    if (this.slots.length===0) return 'Sorry, parking lot is not created yet'  
-    if(this.slots.filter(slot=>slot !=='available').length === 0) return 'Sorry, parking lot is empty'
     let arr =[] 
     arr.push('Slot No. Registration No.') 
     this.slots.forEach((slot,index)=>{
@@ -47,6 +45,7 @@ class ParkingLot {
         })
     return arr
   } 
+
 }
 
 module.exports=ParkingLot

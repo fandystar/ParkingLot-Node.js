@@ -122,22 +122,22 @@ There are two classes defined:
    
 - `carPark(input)` : Allocates nearest slot from entry gate to the car. It can throw following errors:
 
-    - `Sorry, parking lot is full` : When parking lot has reached its maximum capacity.
     - `Sorry, parking lot is not created yet` : When parking lot slots is not created.
-
+    - `Sorry, parking lot is full` : When parking lot has reached its maximum capacity.
+   
  
 - `carLeave(input)` : will make car parking slot to be available  and calculate parking charge based parking hours. It throws following errors:
     
     - `Please provide car number and parking hours` : When input contains either of two  i.e. car number or parking hours
-
+    - `Please provide parking hours` : When input contains car number only.
     - `Slot number <carNumber> is not found` when slot number is absent.
 
 
-- `getSlotsStatus()` : Returns an array containing slot number and car number. It throws an error `Sorry, parking lot is empty` if parking lot is empty.
+- `getSlotsStatus()` : Returns an array containing slot number and car number. It throws an error 
+    -`Sorry, parking lot is empty` if parking lot is empty.
 
 
 `Car()`
-
 - `new Car(carNumber)` : Constructor used to initialize a car object containing 1 field, car number
 
 
