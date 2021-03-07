@@ -122,13 +122,14 @@ There are two classes defined:
    
 - `carPark(input)` : Allocates nearest slot from entry gate to the car. It can throw following errors:
 
+    - `Please provide car number` : When input only contains 'park' keyword
     - `Sorry, parking lot is not created yet` : When parking lot slots is not created.
     - `Sorry, parking lot is full` : When parking lot has reached its maximum capacity.
    
  
 - `carLeave(input)` : will make car parking slot to be available  and calculate parking charge based parking hours. It throws following errors:
     
-    - `Please provide car number and parking hours` : When input contains either of two  i.e. car number or parking hours
+    - `Please provide car number and parking hours` : When input contains either of two or both them  i.e. car number or parking hours
     - `Please provide parking hours` : When input contains car number only.
     - `Slot number <carNumber> is not found` when slot number is absent.
 
