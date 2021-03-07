@@ -4,7 +4,15 @@ clear()
 
 const ParkingLot = require('../class/ParkingLot')
 let parking= new ParkingLot()
-        
+
+describe('car park but parking lot is not created ', function () {
+    test('carPark', function (done) {
+        expect(parking.carPark('KA-01-HH-1234')
+        ).toBe('Sorry, parking lot is not created yet')
+        done() 
+    })
+})        
+
 describe('set slots Capacity to be 6', function () {
     test('setSlotsCapacity', function (done) {
         expect(parking.setSlotsCapacity(6)
