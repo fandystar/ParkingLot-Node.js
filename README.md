@@ -1,5 +1,5 @@
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/) 
+![[GitHub last commit](https://img.shields.io/github/last-commit/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/) 
 
 [!Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/fandystar/ParkingLot-NodeJs?logo=snyk&color=red) 
 
