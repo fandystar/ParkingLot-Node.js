@@ -24,7 +24,7 @@ To **design a parking lot system** with ability to :
 
 - Create a number of parking slots ( available to park )
 
-- Park or leave with a given car number,parking hours
+- Park or leave with a given car number,parking time
 
 - Calculate parking charge when car leave
 
@@ -89,7 +89,7 @@ Users can interact with the Parking Lot system via a following simple set of com
 
 - **park  {carNumber}**: `park KA-01-HH-1234` will allocate car to  the nearest slot from entry gate.
 
-- **leave  {carNumber,parkingTime}**: `leave KA-01-HH-1234 6` will make car parking slot to be available  and calculate parking charge based parking hours ( 6 hours ).
+- **leave  {carNumber,parkingTime}**: `leave KA-01-HH-1234 6` will make car parking slot to be available  and calculate parking charge based parking time ( 6 hours ).
 
 - **status**: `status` will display all slot details ( slot number and car number ).
 
@@ -112,7 +112,7 @@ There are two classes defined:
 
 `ParkingLot()`: It is the main class which is used to initialize a parking lot. In each parking lot there is maximum number of slots and an array of slots that will be occupied by the car. It has following methods:
 
-- `setParkingLotCapacity(input)` : Creates a parking lot with given capacity input. It throws an error `Minimum one slot is required to create parking slot` 
+- `createParkingLot(input)` : Creates a parking lot with given capacity input. It throws an error `Minimum one slot is required to create parking slot` 
  
     - `Minimum one slot is required to create parking slot` : When parking lot is not greater than or equal to one ( 1 slot )
 
@@ -120,18 +120,18 @@ There are two classes defined:
 - `carPark(input)` : Allocates nearest slot from entry gate to the car. It can throw following errors:
 
     - `Please provide car number` : When input only contains 'park' keyword
-    - `Sorry, parking lot is not created yet` : When parking lot slots is not created.
+    - `Sorry, parking lot is not created yet` : When parking lot is not created.
     - `Sorry, parking lot is full` : When parking lot has reached its maximum capacity.
    
  
-- `carLeave(input)` : will make car parking slot to be available  and calculate parking charge based parking hours. It throws following errors:
+- `carLeave(input)` : will make car parking slot to be available  and calculate parking charge based parking time. It throws following errors:
     
-    - `Please provide car number and parking hours` : When input contains either of two or both of them  i.e. car number or parking time
-    - `Please provide parking hours` : When input contains car number only.
+    - `Please provide car number and parking time` : When input contains either of two or both of them  i.e. car number or parking time
+    - `Please provide parking time` : When input contains car number only.
     - `Slot number <carNumber> is not found` when slot number is absent.
 
 
-- `getSlotsStatus()` : Returns an array containing slot number and car number. It throws an error :
+- `parkingSlotsStatus()` : Returns an array containing slot number and car number. It throws an error :
     
     -`Sorry, parking lot is empty` if parking lot is empty.
 
