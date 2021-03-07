@@ -71,11 +71,11 @@ Open terminal and type `node app.js data/input.txt`.
 ```terminal
 node app.js <path_to_file.txt>
 ```
+**Note**: You can find a few sample input files inside `data/` folder.
+
 #### Screenshots
 
 Please go to `screenshots/running` folder to find screenshots of running **Parking Lot** 
-
-**Note**: You can find a few sample input files inside `data/` folder.
 
 #### Explained
 
