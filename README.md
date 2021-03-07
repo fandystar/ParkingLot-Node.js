@@ -123,6 +123,7 @@ There are two classes defined:
 - `carPark(input)` : Allocates nearest slot from entry gate to the car. It can throw following errors:
 
     - `Sorry, parking lot is full` : When parking lot has reached its maximum capacity.
+    - `Sorry, parking lot is not created yet` : When parking lot slots is not created.
 
  
 - `carLeave(input)` : will make car parking slot to be available  and calculate parking charge based parking hours. It throws following errors:
