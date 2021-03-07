@@ -1,3 +1,8 @@
+[![GitHub last commit](https://img.shields.io/github/last-commit/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/) ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/fandystar/ParkingLot-NodeJs?logo=snyk&color=red) 
+[![GitHub top language](https://img.shields.io/github/languages/top/fandystar/ParkingLot-NodeJs?label=NodeJS&logo=Node.js)](https://github.com/fandystar/ParkingLot-NodeJs/) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/fandystar/ParkingLot-NodeJs?logo=github&color=teal)](https://github.com/fandystar/ParkingLot-NodeJs/) 
+](https://github.com/fandystar/ParkingLot-NodeJs/)
+[![CodeFactor](https://www.codefactor.io/repository/github/fandystar/parkinglot-nodejs/badge)](https://www.codefactor.io/repository/github/vinitshahdeo/parkinglot-nodejs) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/275124e731de4f48a7adac2e9984e59f)](https://www.codacy.com/manual/fandystar/ParkingLot-NodeJs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fandystar/ParkingLot-NodeJs&amp;utm_campaign=Badge_Grade)
+
 # ParkingLot
 
 " I own a parking lot that can hold up to 'n' cars at any given point in time. Each slot is
@@ -15,7 +20,6 @@ were using as being available. Total parking charge should be calculated as per 
 parking time. Charge applicable is $10 for first 2 hours and $10 for every additional
 hour. "
 
-[![GitHub last commit](https://img.shields.io/github/last-commit/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/) ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/fandystar/ParkingLot-NodeJs?logo=snyk&color=red) 
 
 ##  About Problem
 
@@ -31,9 +35,6 @@ To **design a parking lot system** with ability to :
 
 
 ## Pre requisites
-
-[![GitHub top language](https://img.shields.io/github/languages/top/fandystar/ParkingLot-NodeJs?label=NodeJS&logo=Node.js)](https://github.com/fandystar/ParkingLot-NodeJs/) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/fandystar/ParkingLot-NodeJs?logo=github&color=teal)](https://github.com/fandystar/ParkingLot-NodeJs/) 
-](https://github.com/fandystar/ParkingLot-NodeJs/)
 
 The source code for this project is written using [Node.js](https://nodejs.org/). Make sure you have [Node.js](https://nodejs.org/) installed on your computer before running this application, **if not please install Node.js from [here](https://nodejs.org/en/download/)**.
 
@@ -67,11 +68,11 @@ Open terminal and navigate (`cd`) to this folder and type the following commands
 ```
 #### For File Mode
 
-Open terminal and type `node app.js data/input.txt`.
+Open terminal and type `node app.js data/input1.txt`.
 ```terminal
 node app.js <path_to_file.txt>
 ```
-**Note**: You can find a few sample input files inside `data/` folder.
+**Note**: You can find 2 samples input files inside `data/` folder.
 
 #### Screenshots
 
@@ -109,7 +110,6 @@ Slot No.  Registration  No.
 
 
 ## 3. Class - OOPs Approach
-[![CodeFactor](https://www.codefactor.io/repository/github/fandystar/parkinglot-nodejs/badge)](https://www.codefactor.io/repository/github/vinitshahdeo/parkinglot-nodejs) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/275124e731de4f48a7adac2e9984e59f)](https://www.codacy.com/manual/fandystar/ParkingLot-NodeJs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fandystar/ParkingLot-NodeJs&amp;utm_campaign=Badge_Grade)
 
 There are two classes defined:
 
