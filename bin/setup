@@ -1,5 +1,7 @@
+
 #!/bin/sh
 
-cd ..
-npm install // install dependencies
-npm test // run unit test
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
+
+npm install
+npm test
