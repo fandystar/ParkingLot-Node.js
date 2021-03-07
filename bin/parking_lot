@@ -3,6 +3,6 @@
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null && pwd)"
 echo ---------------------------
-echo running the program
+echo the ouput
 echo ---------------------------
 node app.js $1
