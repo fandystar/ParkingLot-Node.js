@@ -61,20 +61,16 @@ This is a console application written in `Node.js`. This can be run in two modes
 #### For Interactive Mode
 
 Open terminal and navigate (`cd`) to this folder and type the following commands:
-
 ```bash
 1. npm install
 2. npm start
 ```
-
 #### For File Mode
 
 Open terminal and type `node app.js data/input.txt`.
-
 ```terminal
 node app.js <path_to_file.txt>
 ```
-
 #### Screenshots
 
 Please go to `screenshots/running` folder to find screenshots of running **Parking Lot** 
@@ -195,8 +191,7 @@ Go to `coverage/lcov-report` folder and open `index.html`.
 
 Navigates to the root folder,
 
-Open terminal and type the following:
-
+Open terminal
 
 1. `npm install` : Installs all the dependencies.
 
