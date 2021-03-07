@@ -16,7 +16,8 @@ parking time. Charge applicable is $10 for first 2 hours and $10 for every addit
 hour. "
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/) ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/fandystar/ParkingLot-NodeJs?logo=snyk&color=red) 
-## About Problem
+
+##  About Problem
 
 To **design a parking lot system** with ability to :
 
@@ -90,11 +91,11 @@ Please go to `screenshots/running` folder to find screenshots of running **Parki
 
 Users can interact with the Parking Lot system via a following simple set of commands which produce a specific output:
 
-- **create_parking_lot {slotsCapacity}**: `create_parking_lot 6` will create a parking lot with 6 slots.
+- **create_parking_lot  {slotsCapacity}**: `create_parking_lot 6` will create a parking lot with 6 slots.
 
-- **park {carNumber}**: `park KA-01-HH-1234` will allocate car to  the nearest slot from entry gate.
+- **park  {carNumber}**: `park KA-01-HH-1234` will allocate car to  the nearest slot from entry gate.
 
-- **leave {carNumber,parkingHours}**: `leave KA-01-HH-1234 6` will make car parking slot to be available  and calculate parking charge based parking hours ( 6 hours )
+- **leave  {carNumber,parkingHours}**: `leave KA-01-HH-1234 6` will make car parking slot to be available  and calculate parking charge based parking hours ( 6 hours )
 
 - **getSlotsStatus**: `status` will display all slot details ( slot number and car number )
 
