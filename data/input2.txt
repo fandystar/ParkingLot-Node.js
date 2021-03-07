@@ -1,0 +1,20 @@
+create_parking_lot 7
+status
+park JH-01-HH-1234
+park JH-01-HH-2999
+status
+park JH-01-BB-0001
+park JH-01-HH-7777
+park JH-01-HH-2701
+park JH-01-HH-3141
+leave JH-01-BB-0001
+park KA-01-BB-0001
+park KA-01-HH-7777
+leave JH-01-BB-0001 3
+park KA-01-HH-2701
+status
+leave JH-01-HH-2999 5
+status
+park KA-01-P-333 White
+park DL-12-AA-9999 White
+status
