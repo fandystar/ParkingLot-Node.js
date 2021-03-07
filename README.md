@@ -133,7 +133,8 @@ There are two classes defined:
     - `Slot number <carNumber> is not found` when slot number is absent.
 
 
-- `getSlotsStatus()` : Returns an array containing slot number and car number. It throws an error 
+- `getSlotsStatus()` : Returns an array containing slot number and car number. It throws an error :
+    
     -`Sorry, parking lot is empty` if parking lot is empty.
 
 
