@@ -42,8 +42,6 @@ Feel free to reach out to me via email. Shoot your doubts at [fandyarayalin@gmai
 > Glad to see you here! **Show some ❤️ by starring [this](https://github.com/fandystar/ParkingLot-NodeJs/) repository.**
 
 ## Author
-
-
 #### [fandy araya lin](https://github.com/fandystar)
 
 [![GitHub followers](https://img.shields.io/github/followers/fandystar.svg?label=Follow%20@fandystar&style=social)](https://github.com/fandystar/)
