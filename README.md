@@ -129,7 +129,7 @@ There are two classes defined:
  
 - `carLeave(input)` : will make car parking slot to be available  and calculate parking charge based parking hours. It throws following errors:
     
-    - `Please provide car number and parking hours` : When input contains either of two or both them  i.e. car number or parking hours
+    - `Please provide car number and parking hours` : When input contains either of two or both of them  i.e. car number or parking hours
     - `Please provide parking hours` : When input contains car number only.
     - `Slot number <carNumber> is not found` when slot number is absent.
 
