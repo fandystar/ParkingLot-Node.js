@@ -190,3 +190,9 @@ describe('Please provide parking time with a positive number greater than or equ
         expect(()=>{parking.carLeave('CA-09-IO-1111',-10)}).toThrow(Error)
     })
 })
+
+describe('Please provide parking lot capacity', () => {
+    test('createParkingLot', () => {
+        expect(()=>{parking.createParkingLot()}).toThrow(Error)
+    })
+})
