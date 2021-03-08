@@ -152,12 +152,6 @@ describe('car leave if car number not registered', () => {
     })
 })
 
-// describe('car leave if parking time negative number', () => {
-//     test('carLeave', () => {
-//         expect(()=>{parking.carLeave('KA-01-HH-7777',-2)}).toThrow(Error)
-//     })
-// })
-
 
 describe('car park in slot 1', function () {
     test('carPark', function (done) {
