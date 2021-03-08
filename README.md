@@ -113,19 +113,19 @@ There are two classes defined:
 ### 1. `ParkingLot()`: 
 It is the main class which is used to initialize a parking lot ,array of slots that will be occupied by the car. It has following methods:
 
-- `createParkingLot(input)` : Creates a parking lot with given capacity input. It throws an error `Minimum one slot is required to create parking slot` 
+- `createParkingLot(parkingLotCapacity)` : Creates a parking lot with given capacity input. It throws an error `Minimum one slot is required to create parking slot` 
  
     - `Please provide parking lot capacity with a postive number greater than zero` : When number input is not greater than or equal to one ( minimun 1 slot ) or input is string
 
    
-- `carPark(input)` : Allocates nearest slot from entry gate to the car. It can throw following errors:
+- `carPark(carNumnber)` : Allocates nearest slot from entry gate to the car. It can throw following errors:
 
     - `Please provide car number` : When input only contains 'park' keyword
     - `Sorry, parking lot is not created yet` : When parking lot is not created.
     - `Sorry, parking lot is full` : When parking lot has reached its maximum capacity.
    
  
-- `carLeave(input)` : will make car parking slot to be available  and calculate parking charge based parking time. It throws following errors:
+- `carLeave(carNumber,parkingTime)` : will make car parking slot to be available  and calculate parking charge based parking time. It throws following errors:
     
     - `Please provide car number and parking time` : When input contains either of two or both of them  i.e. car number or parking time
     - `Please provide parking time` : When input contains car number only.
