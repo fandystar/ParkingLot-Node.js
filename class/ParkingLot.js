@@ -19,9 +19,8 @@ class ParkingLot {   // base class
   carPark(carNumber) {
     if (this.parkingSlots.length===0) {throw new Error('Sorry, parking lot is not created yet'  )}
     if(!carNumber) {throw new Error( 'Please provide car number')}
-    let totalAvailableSlots=this.parkingSlots.filter(slot=>slot ==='available').length
-    if (totalAvailableSlots>0) {
-        let index=+this.parkingSlots.findIndex(slot=>slot==='available')
+    let index =  +this.parkingSlots.findIndex(slot=>slot==='available')
+    if( index !== -1) {
         let car =new Car(carNumber)
         this.parkingSlots[index] = car.carNumber
         return `Allocated slot number : ${++index}`
@@ -35,21 +34,26 @@ class ParkingLot {   // base class
     if(!parkingTime) {throw new Error('Please provide parkingTime')}
     if (isNaN(+parkingTime) || (+parkingTime <= 0)) {throw new Error('Please provide parking time with a positive number greater than or equal to 0')}
     let index=+this.parkingSlots.findIndex(slot=>slot===carNumber)
-    if (index ===-1) {throw new Error( `Registration number ${carNumber} not found`)}
-    this.parkingSlots[index] = 'available'
+    if (index ===-1) {
+      {throw new Error( `Registration number ${carNumber} not found`)}
+    } else {
+      this.parkingSlots[index] = 'available'
     return `Registration number ${carNumber} with Slot Number ${++index} is free with Charge ${parkingCharge(parkingTime)}`
+    }
   } 
   
   parkingSlotsStatus(){
-    if(+this.parkingSlots.findIndex(slot=>slot!=='available') === -1) {throw new Error('Sorry, parking lot is empty')} 
-    let arr =[] 
-    arr.push('Slot No. Registration No.') 
-    this.parkingSlots.forEach((slot,index)=>{
+    if(+this.parkingSlots.findIndex(slot=>slot!=='available') === -1) {
+      throw new Error('Sorry, parking lot is empty')
+    } else {  let arr =[] 
+      arr.push('Slot No. Registration No.') 
+      this.parkingSlots.forEach((slot,index)=>{
           if (slot!=='available') {
           let number = index+1
           arr.push(number + '.  ' + this.parkingSlots[index]) }
         })
-    return arr
+      return arr }
   }
+  
 }
 module.exports=ParkingLot
