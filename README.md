@@ -204,7 +204,7 @@ Open terminal
 
 Feel free to reach out to me via email. Shoot your doubts at [fandyarayalin@gmail.com](mailto:fandyarayalin@gmail.com?Subject=ParkingLot).
 
-> Glad to see you here! **Show some ❤️ by starring [this](https://github.com/fandystar/ParkingLot-NodeJs/) repository.**
+> Glad to share it here! **Show some ❤️ by starring [this](https://github.com/fandystar/ParkingLot-NodeJs/) repository.**
 
 ## Author
 
