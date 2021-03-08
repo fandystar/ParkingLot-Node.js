@@ -10,6 +10,7 @@ class ParkingLot {   // base class
   }  
   
   createParkingLot(parkingLotCapacity) {  
+    if (!parkingLotCapacity) {throw new Error('Please provide parking lot capacity')}
     if (isNaN(+parkingLotCapacity) || (+parkingLotCapacity<=0)) {throw new Error('Please provide parking lot capacity with a postive number greater than zero')}
     this.parkingSlots=new Array(+parkingLotCapacity).fill('available')
     return `Created parking lot with ${parkingLotCapacity} slots`
@@ -20,7 +21,7 @@ class ParkingLot {   // base class
     if(!carNumber) {throw new Error( 'Please provide car number')}
     let totalAvailableSlots=this.parkingSlots.filter(slot=>slot ==='available').length
     if (totalAvailableSlots>0) {
-        let index=this.parkingSlots.findIndex(slot=>slot==='available')
+        let index=+this.parkingSlots.findIndex(slot=>slot==='available')
         let car =new Car(carNumber)
         this.parkingSlots[index] = car.carNumber
         return `Allocated slot number : ${++index}`
@@ -40,6 +41,7 @@ class ParkingLot {   // base class
   } 
   
   parkingSlotsStatus(){
+    if(+this.parkingSlots.findIndex(slot=>slot!=='available') === -1) {throw new Error('Sorry, parking lot is empty')} 
     let arr =[] 
     arr.push('Slot No. Registration No.') 
     this.parkingSlots.forEach((slot,index)=>{
@@ -47,7 +49,6 @@ class ParkingLot {   // base class
           let number = index+1
           arr.push(number + '.  ' + this.parkingSlots[index]) }
         })
-    if (arr.length === 1 ) {throw new Error('Sorry, parking lot is empty')}  
     return arr
   }
 }
