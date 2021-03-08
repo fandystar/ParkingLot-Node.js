@@ -79,7 +79,7 @@ if (commandLineInputs[commandLineInputs.length - 1].endsWith('.txt')) {
         if (err) {
             print('Error in reading file')
         }
-        let arr = data.split('\n')        
+        let arr = data.split('\n') 
         for (let i = 0; i < arr.length; i++) {
 			processCommands(arr[i])
         }
