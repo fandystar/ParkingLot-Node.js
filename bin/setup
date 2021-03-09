@@ -16,3 +16,4 @@ echo ---------------------------
 echo run unit tests
 echo ---------------------------
 npm test
+

@@ -172,7 +172,7 @@ describe('car park in slot 3', function () {
 
 describe('get slots status length which are 6 slots + 1 header  = 7 ', function () {
     test('parkingSlotsStatus', function (done) {
-        expect(parking.parkingSlotsStatus().length
+        expect(parking.slotsStatus().length
         ).toBe(7)
         done() 
     })
