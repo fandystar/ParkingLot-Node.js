@@ -19,7 +19,7 @@ const processCommand = (input) => {
     switch (command) {
         case 'create_parking_lot':
             try {
-                print(parking.createParkingLot(capacity))
+                print(parking.create(capacity))
                 }
             catch (err) {
                 print(err.message)

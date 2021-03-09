@@ -113,7 +113,7 @@ There are two classes defined:
 ### 1. `ParkingLot()`: 
 It is the main class which is used to initialize a parking lot ,array of slots that will be occupied by the car. It has following methods:
 
-- `createParkingLot(capacity)` : Creates a parking lot with given capacity input. It throws an error `Minimum one slot is required to create parking slot` 
+- `create(capacity)` : Creates a parking lot with given capacity input. It throws an error `Minimum one slot is required to create parking slot` 
     
     - `Please provide parking lot capacity` : When there is no capacity input
     - `Please provide parking lot capacity with a postive number greater than zero` : When number input is not greater than or equal to one ( minimun 1 slot ) or input is string

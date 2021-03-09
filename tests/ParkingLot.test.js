@@ -13,15 +13,15 @@ describe('Parking lot is not created ', () => {
 })
 
 describe('Please provide parking lot capacity with a postive number greater than zero', () => {
-    test('createParkinglot', () => {
-        expect(()=>{parking.createParkingLot('saya')}).toThrow(Error)
+    test('create', () => {
+        expect(()=>{parking.create('saya')}).toThrow(Error)
     })
 })
 
 
 describe('Created parking lot with 6 slots', function () {
-    test('createParkingLot', function (done) {
-        expect(parking.createParkingLot(6)
+    test('create', function (done) {
+        expect(parking.create(6)
         ).toBe('Created parking lot with 6 slots')
         done() 
     })
@@ -192,7 +192,7 @@ describe('Please provide parking time with a positive number greater than or equ
 })
 
 describe('Please provide parking lot capacity', () => {
-    test('createParkingLot', () => {
-        expect(()=>{parking.createParkingLot()}).toThrow(Error)
+    test('create', () => {
+        expect(()=>{parking.create()}).toThrow(Error)
     })
 })

@@ -9,7 +9,7 @@ class ParkingLot {   // base class
     this.slots=new Array()  // arrray for parking slots 
   }  
   
-  createParkingLot(capacity) {  
+  create(capacity) {  
     if (!capacity) {throw new Error('Please capacity')}
     if (isNaN(+capacity) || (+capacity<=0)) {throw new Error('Please capacity with a postive number greater than zero')}
     this.slots=new Array(+capacity).fill('available')
