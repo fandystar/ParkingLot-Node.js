@@ -24,7 +24,7 @@ To **design a parking lot system** with ability to :
 
 - Create a number of parking slots ( available to park )
 
-- Park or leave with a given number plate,parking time
+- Park or leave with a given number plate,hours(parking time)
 
 - Calculate parking charge when car leave
 
@@ -85,7 +85,7 @@ Please go to `screenshots/running` folder to find screenshots of running **Parki
 
 Users can interact with the Parking Lot system via a following simple set of commands which produce a specific output:
 
-- **create_parking_lot {capacity}**: `create_parking_lot 6` will create a parking lot with 6 slots.
+- **create {capacity}**: `create_parking_lot 6` will create a parking lot with 6 slots.
 
 - **park {numberPlate}**: `park KA-01-HH-1234` will allocate car to  the nearest slot from entry gate.
 
@@ -115,8 +115,8 @@ It is the main class which is used to initialize a parking lot ,array of slots t
 
 - `create(capacity)` : Creates a parking lot with given capacity input. It throws an error `Minimum one slot is required to create parking slot` 
     
-    - `Please provide parking lot capacity` : When there is no capacity input
-    - `Please provide parking lot capacity with a postive number greater than zero` : When number input is not greater than or equal to one ( minimun 1 slot ) or input is string
+    - `Please provide capacity` : When there is no capacity input
+    - `Please provide capacity with a postive number greater than zero` : When number input is not greater than or equal to one ( minimun 1 slot ) or input is string
 
    
 - `carPark(numberPlate)` : Allocates nearest slot from entry gate to the car. It can throw following errors:
@@ -128,10 +128,10 @@ It is the main class which is used to initialize a parking lot ,array of slots t
  
 - `carLeave(numberPlate,hours)` : will make car parking slot to be available  and calculate parking   charge based parking time. It throws following errors:
     
-    - `Please provide number plate and parking time` : When input contains either of two or both of them  i.e. number plate or parking time
-    - `Please provide parking time` : When input contains number plate only.
+    - `Please provide number plate and hours` : When input contains either of two or both of them  i.e. number plate or parking time
+    - `Please provide hours` : When input contains number plate only.
     - `Slot number <numberPlate> is not found` when slot number is absent.
-    - `Please provide parking time with a positive number greater than or equal to 0` when parking time input is string or negative number
+    - `Please provide hours with a positive number greater than or equal to 0` when parking time input is string or negative number
 
 - `slotsStatus()` : Returns an array containing slot number and number plate. It throws an error :
     
