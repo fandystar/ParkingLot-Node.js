@@ -6,51 +6,51 @@ const {log} =console
 
 class ParkingLot {   // base class
   constructor() {
-    this.parkingSlots=new Array()  // arrray for parking slots 
+    this.slots=new Array()  // arrray for parking slots 
   }  
   
-  createParkingLot(parkingLotCapacity) {  
-    if (!parkingLotCapacity) {throw new Error('Please provide parking lot capacity')}
-    if (isNaN(+parkingLotCapacity) || (+parkingLotCapacity<=0)) {throw new Error('Please provide parking lot capacity with a postive number greater than zero')}
-    this.parkingSlots=new Array(+parkingLotCapacity).fill('available')
-    return `Created parking lot with ${parkingLotCapacity} slots`
+  createParkingLot(capacity) {  
+    if (!capacity) {throw new Error('Please capacity')}
+    if (isNaN(+capacity) || (+capacity<=0)) {throw new Error('Please capacity with a postive number greater than zero')}
+    this.slots=new Array(+capacity).fill('available')
+    return `Created parking lot with ${capacity} slots`
   }
   
-  carPark(carNumber) {
-    if (this.parkingSlots.length===0) {throw new Error('Sorry, parking lot is not created yet'  )}
-    if(!carNumber) {throw new Error( 'Please provide car number')}
-    let index =  +this.parkingSlots.findIndex(slot=>slot==='available')
+  carPark(numberPlate) {
+    if (this.slots.length===0) {throw new Error('Sorry, parking lot is not created yet'  )}
+    if(!numberPlate) {throw new Error( 'Please provide number plate')}
+    let index =  +this.slots.findIndex(slot=>slot==='available')
     if( index !== -1) {
-        let car =new Car(carNumber)
-        this.parkingSlots[index] = car.carNumber
+        let car =new Car(numberPlate)
+        this.slots[index] = car.numberPlate
         return `Allocated slot number : ${++index}`
     } else {
         throw new Error('Sorry, parking lot is full')
     }
   }
 
-  carLeave(carNumber,parkingTime){
-    if(!carNumber) {throw new Error('Please provide car number & parkingTime')}
-    if(!parkingTime) {throw new Error('Please provide parkingTime')}
-    if (isNaN(+parkingTime) || (+parkingTime <= 0)) {throw new Error('Please provide parking time with a positive number greater than or equal to 0')}
-    let index=+this.parkingSlots.findIndex(slot=>slot===carNumber)
+  carLeave(numberPlate,hours){
+    if(!numberPlate) {throw new Error('Please provide number plate & hours')}
+    if(!hours) {throw new Error('Please provide hours')}
+    if (isNaN(+hours) || (+hours <= 0)) {throw new Error('Please provide hours with a positive number greater than or equal to 0')}
+    let index=+this.slots.findIndex(slot=>slot===numberPlate)
     if (index ===-1) {
-      {throw new Error( `Registration number ${carNumber} not found`)}
+      {throw new Error( `Registration number ${numberPlate} not found`)}
     } else {
-      this.parkingSlots[index] = 'available'
-    return `Registration number ${carNumber} with Slot Number ${++index} is free with Charge ${parkingCharge(parkingTime)}`
+      this.slots[index] = 'available'
+    return `Registration number ${numberPlate} with Slot Number ${++index} is free with Charge ${parkingCharge(hours)}`
     }
   } 
   
-  parkingSlotsStatus(){
-    if(+this.parkingSlots.findIndex(slot=>slot!=='available') === -1) {
+  slotsStatus(){
+    if(+this.slots.findIndex(slot=>slot!=='available') === -1) {
       throw new Error('Sorry, parking lot is empty')
     } else {  let arr =[] 
       arr.push('Slot No. Registration No.') 
-      this.parkingSlots.forEach((slot,index)=>{
+      this.slots.forEach((slot,index)=>{
           if (slot!=='available') {
           let number = index+1
-          arr.push(number + '.  ' + this.parkingSlots[index]) }
+          arr.push(number + '.  ' + this.slots[index]) }
         })
       return arr }
   }

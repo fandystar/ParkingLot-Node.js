@@ -1,7 +1,7 @@
 
 class Car {
-    constructor(carNumber){
-        this.carNumber =carNumber
+    constructor(numberPlate){
+        this.numberPlate =numberPlate
     }
 }
 module.exports=Car

@@ -11,15 +11,15 @@ let parking= new ParkingLot()
 
 clear()
 
-const processCommands = (input) => {
+const processCommand = (input) => {
 	let command = input.split(' ')[0]
-    let parkingLotCapacity = input.split(' ')[1]
-    let carNumber =input.split(' ')[1]
-    let parkingTime = input.split(' ')[2]   
+    let capacity = input.split(' ')[1]
+    let numberPlate =input.split(' ')[1]
+    let hours = input.split(' ')[2]   
     switch (command) {
         case 'create_parking_lot':
             try {
-                print(parking.createParkingLot(parkingLotCapacity))
+                print(parking.createParkingLot(capacity))
                 }
             catch (err) {
                 print(err.message)
@@ -27,7 +27,7 @@ const processCommands = (input) => {
             break
         case 'park':
             try {
-                print(parking.carPark(carNumber))
+                print(parking.carPark(numberPlate))
             }
             catch (err) {
                 print(err.message)
@@ -35,7 +35,7 @@ const processCommands = (input) => {
             break
         case 'leave':
             try {
-                print(parking.carLeave(carNumber,parkingTime))
+                print(parking.carLeave(numberPlate,hours))
                 }
             catch (err) {
                 print(err.message)
@@ -43,7 +43,7 @@ const processCommands = (input) => {
             break
         case 'status':
             try {
-                print(parking.parkingSlotsStatus().join('\n'))
+                print(parking.slotsStatus().join('\n'))
             }
             catch (err) {
                 print(err.message);
@@ -68,7 +68,7 @@ const openInteractiveConsole =  ()=> {
 
     if (interactiveMode) {
         prompts.question('Input: ', function (data) {
-            processCommands(data)
+            processCommand(data)
         })
     }
 }
@@ -81,7 +81,7 @@ if (commandLineInputs[commandLineInputs.length - 1].endsWith('.txt')) {
         }
         let arr = data.split('\n') 
         for (let i = 0; i < arr.length; i++) {
-			processCommands(arr[i])
+			processCommand(arr[i])
         }
        process.exit(1)
     })

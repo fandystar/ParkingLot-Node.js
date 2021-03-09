@@ -7,7 +7,7 @@ given a number starting at 1 increasing with increasing distance from the entry 
 in steps of one. I want to create an automated ticketing system that allows my
 customers to use my parking lot without human intervention.
 When a car enters my parking lot, I want to have a ticket issued to the driver. The
-ticket issuing process includes us documenting the car number (number
+ticket issuing process includes us documenting the number plate (number
 plate) and allocating an available parking slot to the car
 before actually handing over a ticket to the driver (we assume that our customers are
 nice enough to always park in the slots allocated to them). The customer should be
@@ -24,7 +24,7 @@ To **design a parking lot system** with ability to :
 
 - Create a number of parking slots ( available to park )
 
-- Park or leave with a given car number,parking time
+- Park or leave with a given number plate,parking time
 
 - Calculate parking charge when car leave
 
@@ -85,21 +85,21 @@ Please go to `screenshots/running` folder to find screenshots of running **Parki
 
 Users can interact with the Parking Lot system via a following simple set of commands which produce a specific output:
 
-- **create_parking_lot  {parkingLotCapacity}**: `create_parking_lot 6` will create a parking lot with 6 slots.
+- **create_parking_lot {capacity}**: `create_parking_lot 6` will create a parking lot with 6 slots.
 
-- **park  {carNumber}**: `park KA-01-HH-1234` will allocate car to  the nearest slot from entry gate.
+- **park {numberPlate}**: `park KA-01-HH-1234` will allocate car to  the nearest slot from entry gate.
 
-- **leave  {carNumber,parkingTime}**: `leave KA-01-HH-1234 6` will make car parking slot to be available  and calculate parking charge based parking time ( 6 hours ).
+- **leave {numberPlate,hours}**: `leave KA-01-HH-1234 6` will make car parking slot to be available  and calculate parking charge based 6 hours ( parking time ).
 
-- **status**: `status` will display all slot details ( slot number and car number ).
+- **status**: `status` will display all slot details ( slot number and number plate ).
 
 ```bash
 Slot No.  Registration  No. 
 1         KA-01-HH-1234  
-2         KA-01-HH-9999  
-3         KA-01-BB-0001  
-4         KA-01-HH-2701  
-5         KA-01-HH-3141  
+2         KA-01-HH-6666  
+3         KA-01-BB-1911  
+4         KA-01-HH-413  
+5         KA-01-HH-7777  
 ```
 
 
@@ -113,36 +113,36 @@ There are two classes defined:
 ### 1. `ParkingLot()`: 
 It is the main class which is used to initialize a parking lot ,array of slots that will be occupied by the car. It has following methods:
 
-- `createParkingLot(parkingLotCapacity)` : Creates a parking lot with given capacity input. It throws an error `Minimum one slot is required to create parking slot` 
+- `createParkingLot(capacity)` : Creates a parking lot with given capacity input. It throws an error `Minimum one slot is required to create parking slot` 
     
-    - `Please provide parking lot capacity` : When there is no parkingLotCapacity input
+    - `Please provide parking lot capacity` : When there is no capacity input
     - `Please provide parking lot capacity with a postive number greater than zero` : When number input is not greater than or equal to one ( minimun 1 slot ) or input is string
 
    
-- `carPark(carNumnber)` : Allocates nearest slot from entry gate to the car. It can throw following errors:
+- `carPark(numberPlate)` : Allocates nearest slot from entry gate to the car. It can throw following errors:
 
-    - `Please provide car number` : When input only contains 'park' keyword
+    - `Please provide number plate` : When input only contains 'park' keyword
     - `Sorry, parking lot is not created yet` : When parking lot is not created.
     - `Sorry, parking lot is full` : When parking lot has reached its maximum capacity.
    
  
-- `carLeave(carNumber,parkingTime)` : will make car parking slot to be available  and calculate parking charge based parking time. It throws following errors:
+- `carLeave(numberPlate,hours)` : will make car parking slot to be available  and calculate parking   charge based parking time. It throws following errors:
     
-    - `Please provide car number and parking time` : When input contains either of two or both of them  i.e. car number or parking time
-    - `Please provide parking time` : When input contains car number only.
-    - `Slot number <carNumber> is not found` when slot number is absent.
+    - `Please provide number plate and parking time` : When input contains either of two or both of them  i.e. number plate or parking time
+    - `Please provide parking time` : When input contains number plate only.
+    - `Slot number <numberPlate> is not found` when slot number is absent.
     - `Please provide parking time with a positive number greater than or equal to 0` when parking time input is string or negative number
 
-- `parkingSlotsStatus()` : Returns an array containing slot number and car number. It throws an error :
+- `slotsStatus()` : Returns an array containing slot number and number plate. It throws an error :
     
     -`Sorry, parking lot is empty` if there is no car in each slot
 
 
 ### 2. `Car()`
-- `new Car(carNumber)` : Constructor used to initialize a car object containing 1 field, car number
+- `new Car(numberPlate)` : Constructor used to initialize a car object containing 1 field, number plate
 
 
-**Note:** *I've made an assumption that the car number for cars can never be same.*
+**Note:** *I've made an assumption that the number plate for cars can never be same.*
 
 ## 4. Test Scripts
 

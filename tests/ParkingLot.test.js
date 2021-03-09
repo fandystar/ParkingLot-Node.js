@@ -29,7 +29,7 @@ describe('Created parking lot with 6 slots', function () {
 
 describe('Sorry, parking lot is empty', () => {
     test('status', () => {
-        expect(()=>{parking.parkingSlotsStatus()}).toThrow(Error)
+        expect(()=>{parking.slotsStatus()}).toThrow(Error)
     })
 })
 
@@ -109,7 +109,7 @@ describe("Registration number KA-01-HH-3141 with Slot Number 6 is free with Char
 
 describe('get slots status length which are 5 slots + 1 header  = 6 ', function () {
     test('parkingSlotsStatus', function (done) {
-        expect(parking.parkingSlotsStatus().length
+        expect(parking.slotsStatus().length
         ).toBe(6)
         done() 
     })
