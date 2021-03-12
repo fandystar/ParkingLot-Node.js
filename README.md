@@ -1,6 +1,6 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/fandystar/ParkingLot-NodeJs?logo=github)](https://github.com/fandystar/ParkingLot-NodeJs/) [![GitHub top language](https://img.shields.io/github/languages/top/fandystar/ParkingLot-NodeJs?label=NodeJS&logo=Node.js)](https://github.com/fandystar/ParkingLot-NodeJs/) [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/fandystar/ParkingLot-NodeJs?logo=github&color=teal)](https://github.com/fandystar/ParkingLot-NodeJs/)
 
-# ParkingLot
+# About Problem
 
 " I own a parking lot that can hold up to 'n' cars at any given point in time. Each slot is
 given a number starting at 1 increasing with increasing distance from the entry point
@@ -18,7 +18,7 @@ parking time. Charge applicable is $10 for first 2 hours and $10 for every addit
 hour. "
 
 
-##  About Problem
+## ParkingLot
 
 To **design a parking lot system** with ability to :
 
