@@ -13,12 +13,10 @@ clear()
 
 const processCommand = (input) => {
 	let command = input.split(' ')[0]
-    let capacity = input.split(' ')[1]
-    let numberPlate =input.split(' ')[1]
-    let hours = input.split(' ')[2]   
     switch (command) {
         case 'create_parking_lot':
             try {
+                let capacity = input.split(' ')[1]
                 print(parking.create(capacity))
                 }
             catch (err) {
@@ -27,6 +25,7 @@ const processCommand = (input) => {
             break
         case 'park':
             try {
+                let numberPlate =input.split(' ')[1]
                 print(parking.carPark(numberPlate))
             }
             catch (err) {
@@ -35,6 +34,8 @@ const processCommand = (input) => {
             break
         case 'leave':
             try {
+                let hours = input.split(' ')[2]   
+                let numberPlate =input.split(' ')[1]
                 print(parking.carLeave(numberPlate,hours))
                 }
             catch (err) {
