@@ -2,6 +2,6 @@
 #!/bin/sh
 
 echo ---------------------------
-echo run program
+echo run unit tests
 echo ---------------------------
 npm test
